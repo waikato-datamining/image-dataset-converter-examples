@@ -3,8 +3,9 @@
 ### sub-dir to ADAMS
 
 The following converts an image classification dataset from the sub-dir format
-(sub-directory names represent the image classification labels) into the ADAMS
-format, which stores the label in an associated .report file (Java properties file):
+(sub-directory names represent the image classification labels) into the 
+[ADAMS format](https://github.com/waikato-datamining/image-dataset-converter/blob/main/formats/adams.md), 
+which stores the label in an associated .report file (Java properties file):
 
 ```bash
 img-convert -l INFO \
