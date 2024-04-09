@@ -8,7 +8,7 @@ The following converts an image classification dataset from the sub-dir format
 which stores the label in an associated .report file (Java properties file):
 
 ```bash
-img-convert -l INFO \
+idc-convert -l INFO \
   from-subdir-ic \
     -l INFO \
     -i ./input/ \
@@ -27,7 +27,7 @@ By enforcing batch-processing `--force_batch` and using the
 like this:
 
 ```bash
-img-convert -l INFO --force_batch \
+idc-convert -l INFO --force_batch \
   from-subdir-ic \
     -l INFO \
     -i ./input/ \
