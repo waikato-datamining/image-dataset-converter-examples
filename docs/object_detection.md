@@ -20,9 +20,10 @@ idc-convert \
     -o ./coco
 ```
 
-# VOC XML to MS COCO (train/val/test splits)
+# VOC XML to YOLO (train/val/test splits)
 
-You can also split the data, e.g., into train, validation and test subsets:
+You can also split the data, e.g., into train, validation and test subsets.
+The following converts the VOC XML now into YOLO format:
 
 ```bash
 idc-convert \
@@ -30,9 +31,10 @@ idc-convert \
   from-voc-od \
     -l INFO \
     -i ./voc/*.xml \
-  to-coco-od \
+  to-yolo-od \
     -l INFO \
-    -o ./coco-split \
+    -o ./yolo-split \
+    --labels ./yolo-split/labels.txt \
     --split_names train val test \
     --split_ratios 70 15 15
 ```
