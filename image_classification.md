@@ -1,6 +1,6 @@
 # Image classification
 
-### sub-dir to ADAMS
+## sub-dir to ADAMS
 
 The following converts an image classification dataset from the sub-dir format
 (sub-directory names represent the image classification labels) into the 
@@ -19,7 +19,7 @@ idc-convert -l INFO \
 ```
 
 
-### sub-dir (randomized train/val/test splits)
+## sub-dir (randomized train/val/test splits)
 
 By enforcing batch-processing `--force_batch` and using the 
 `randomize-records` filter, randomized train/val/test splits
