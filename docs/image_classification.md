@@ -1,3 +1,8 @@
+Readers and writers for image segmentation have the `-ic` suffix.
+
+Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
+*image classification* dataset and extract it.
+
 # sub-dir to ADAMS
 
 The following converts an image classification dataset from the sub-dir format
@@ -9,10 +14,10 @@ which stores the label in an associated .report file (Java properties file):
 idc-convert -l INFO \
   from-subdir-ic \
     -l INFO \
-    -i ./input/ \
+    -i ./subdir/ \
   to-adams-ic \
     -l INFO \
-    -o ./output \
+    -o ./adams \
     -c classification
 ```
 
@@ -28,12 +33,12 @@ like this:
 idc-convert -l INFO --force_batch \
   from-subdir-ic \
     -l INFO \
-    -i ./input/ \
+    -i ./subdir/ \
   randomize-records \
     -s 42 \
   to-subdir-ic \
     -l INFO \
-    -o ./output \
+    -o ./adams-split \
     --split_names train val test \
     --split_ratios 70 15 15
 ```
