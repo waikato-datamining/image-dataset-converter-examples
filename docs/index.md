@@ -6,7 +6,7 @@ into another. It has I/O support for the following domains:
 * Object detection
 * Image segmentation
 
-Please refer to the [Dataset formats](https://github.com/waikato-datamining/image-dataset-converter?tab=readme-ov-file#dataset-formats)
+Please refer to the [dataset formats](https://github.com/waikato-datamining/image-dataset-converter?tab=readme-ov-file#dataset-formats)
 section for more details on supported formats.
 
 But the library does not just convert datasets, you can also slot in complex filter pipelines to 
