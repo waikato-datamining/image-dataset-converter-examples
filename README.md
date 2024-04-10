@@ -6,3 +6,11 @@ Repository with examples for the image-dataset-converter libraries.
 * [Image segmentation](image_segmentation.md)
 * [Filters](filters.md)
 * [Docker](docker.md)
+
+## Additional libraries
+
+* [Image augmentation](imgaug.md)
+* [Image statistics](imgstat.md)
+* [Image visualizations](imgvis.md)
+* [Redis predictions](redis-predictions.md)
+* [Video](video.md)
