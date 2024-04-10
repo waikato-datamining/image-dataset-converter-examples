@@ -12,7 +12,7 @@ idc-convert \
   -l INFO \
   from-blue-channel-is \
     -l INFO \
-    -i ./bluechannel/*.png
+    -i ./bluechannel/*.png \
     --labels Animal Archway Bicyclist Bridge Building Car CartLuggagePram Child Column_Pole \
              Fence LaneMkgsDriv LaneMkgsNonDriv Misc_Text MotorcycleScooter OtherMoving ParkingBlock \
              Pedestrian Road RoadShoulder Sidewalk SignSymbol Sky SUVPickupTruck TrafficCone \
