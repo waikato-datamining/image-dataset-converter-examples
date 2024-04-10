@@ -1,10 +1,8 @@
-# Video
-
-## Requirements
+# Requirements
 
 Requires the [image-dataset-converter-video](https://github.com/waikato-datamining/image-dataset-converter-video) module.
 
-## Extract frames from video file
+# Extract frames from video file
 
 The following extracts a total of 100 frames from `./input/video.mp4`, using every 
 20th frame and stores the images in the `./output` directory: 
@@ -25,5 +23,5 @@ idc-convert \
 
 Though the data type is *object detection* (`-t od`), this is not really relevant in this
 example. If there were other filters, e.g., for applying object detection 
-[Redis models](https://github.com/waikato-datamining/image-dataset-converter-redis-predictions),
+[Redis models](redis-predictions.md),
 then it would be necessary to specify the correct type.

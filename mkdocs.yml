@@ -1,0 +1,27 @@
+site_name: image-dataset-converter examples
+repo_url: https://github.com/waikato-datamining/image-dataset-converter-examples
+edit_uri: edit/master/docs/
+site_description: Examples for using the image-dataset-converter libraries
+theme:
+    name: material
+markdown_extensions:
+    - toc:
+          baselevel: 2
+          permalink: "#"
+    - attr_list
+plugins:
+    - search
+nav:
+    - Home: index.md
+    - Core:
+        - Image classification: image_classification.md
+        - Object detection: object_detection.md
+        - Image segmentation: image_segmentation.md
+        - Filter usage: filters.md
+        - Docker usage: docker.md
+    - Additional libraries:
+        - Image augmentation: imgaug.md
+        - Image statistics: imgstats.md
+        - Image visualizations: imgvis.md
+        - Redis predictions: redis-predictions.md
+        - Video: video.md
