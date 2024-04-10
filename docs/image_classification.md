@@ -1,4 +1,4 @@
-Readers and writers for image segmentation have the `-ic` suffix.
+Readers and writers for image classification have the `-ic` suffix.
 
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
 *image classification* dataset and extract it.
