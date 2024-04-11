@@ -491,8 +491,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#image-dataset-converter" class="md-nav__link">
-    image-dataset-converter
+  <a href="#image-dataset-converter-direct-prediction" class="md-nav__link">
+    image-dataset-converter (direct prediction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-dataset-converter-via-meta-sub-images" class="md-nav__link">
+    image-dataset-converter (via meta-sub-images)
   </a>
   
 </li>
@@ -619,8 +626,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#image-dataset-converter" class="md-nav__link">
-    image-dataset-converter
+  <a href="#image-dataset-converter-direct-prediction" class="md-nav__link">
+    image-dataset-converter (direct prediction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-dataset-converter-via-meta-sub-images" class="md-nav__link">
+    image-dataset-converter (via meta-sub-images)
   </a>
   
 </li>
@@ -697,7 +711,7 @@ running on the CPU: </p>
     --model /workspace/yolov5n.pt \
     --data /workspace/coco.yaml
 </code></pre>
-<h3 id="image-dataset-converter">image-dataset-converter<a class="headerlink" href="#image-dataset-converter" title="Permanent link">#</a></h3>
+<h3 id="image-dataset-converter-direct-prediction">image-dataset-converter (direct prediction)<a class="headerlink" href="#image-dataset-converter-direct-prediction" title="Permanent link">#</a></h3>
 <p>The following pipeline loads every 2nd frame from the dashcam01.mp4 video,
 obtains predictions from the Yolov5 model (using the Redis backend), overlays the predictions
 and then displays them:</p>
@@ -725,6 +739,34 @@ and then displays them:</p>
     --size 800,224 \
     --delay 1
 </code></pre>
+<h3 id="image-dataset-converter-via-meta-sub-images">image-dataset-converter (via meta-sub-images)<a class="headerlink" href="#image-dataset-converter-via-meta-sub-images" title="Permanent link">#</a></h3>
+<p>Like the above example, but uses the <code>meta-sub-images</code> filter to split the incoming images into two
+and sends them to the model one-by-one, then assembles the predictions and forwards them:</p>
+<pre><code class="language-bash">idc-convert \
+  -l INFO \
+  from-video-file \
+    -i ./dashcam01.mp4 \
+    -n 2 \
+    -t od \
+  meta-sub-images \
+    -l INFO \
+    -r 0,0,400,224 400,0,400,224 \
+    --base_filter &quot;redis-predict-od --channel_out images --channel_in predictions --timeout 1.0&quot; \
+  add-annotation-overlay-od \
+    --outline_alpha 255 \
+    --outline_thickness 1 \
+    --fill \
+    --fill_alpha 128 \
+    --vary_colors \
+    --font_size 10 \
+    --text_format &quot;{label}: {score}&quot; \
+    --text_placement T,L \
+    --force_bbox \
+  image-viewer \
+    --size 800,224 \
+    --delay 1
+</code></pre>
+<p><strong>NB:</strong> Requires the <a href="https://github.com/waikato-datamining/image-dataset-converter-imgaug">image-dataset-converter-imgaug</a> library.</p>
 
 
 
