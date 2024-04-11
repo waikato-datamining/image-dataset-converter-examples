@@ -16,7 +16,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   crop \
     -m add \
     -f 0.1 \
@@ -69,7 +69,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   sub-images \
     -l INFO \
     -r 0,0,400,400 400,0,400,400 0,400,400,400 400,400,400,400 \

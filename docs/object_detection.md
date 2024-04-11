@@ -14,7 +14,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   to-coco-od \
     -l INFO \
     -o ./coco
@@ -30,7 +30,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   to-yolo-od \
     -l INFO \
     -o ./yolo-split \

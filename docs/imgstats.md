@@ -15,7 +15,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   label-dist \
     -l INFO
 ```
@@ -54,7 +54,7 @@ idc-convert \
   -l INFO \
   from-voc-od \
     -l INFO \
-    -i ./voc/*.xml \
+    -i "./voc/*.xml" \
   area-histogram \
     -l INFO
 ```
