@@ -1,7 +1,7 @@
 # image-dataset-converter-examples
 Examples for the [image-dataset-converter](https://github.com/waikato-datamining/image-dataset-converter) libraries:
 
-https://waikato-datamining.github.io/image-dataset-converter-examples/
+https://www.data-mining.co.nz/image-dataset-converter-examples/
 
 
 ## Local

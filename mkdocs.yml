@@ -1,4 +1,5 @@
 site_name: image-dataset-converter examples
+site_url: https://www.data-mining.co.nz/image-dataset-converter-examples/
 repo_url: https://github.com/waikato-datamining/image-dataset-converter-examples
 edit_uri: edit/master/docs/
 site_description: Examples for using the image-dataset-converter libraries
