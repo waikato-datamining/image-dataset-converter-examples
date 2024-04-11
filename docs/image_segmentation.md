@@ -1,9 +1,9 @@
 Readers and writers for image segmentation have the `-is` suffix.
 
-# Blue channel to Indexed PNG
-
 Download the blue channel archive of the [camvid](https://datasets.cms.waikato.ac.nz/ufdl/camvid/) dataset
 and extract it.
+
+# Blue channel to Indexed PNG
 
 The following command-line will convert it into a dataset using indexed PNG files:
 
