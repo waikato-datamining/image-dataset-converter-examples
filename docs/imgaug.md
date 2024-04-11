@@ -1,9 +1,11 @@
 # Requirements
 
-Requires the [image-dataset-converter-imgaug](https://github.com/waikato-datamining/image-dataset-converter-imgaug) module.
+Requires the [image-dataset-converter-imgaug](https://github.com/waikato-datamining/image-dataset-converter-imgaug) library.
 
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
 *object detection* VOC XML dataset and extract it.
+
+# Plugins
 
 ## Convert VOC XML to YOLO (crop/rotate)
 

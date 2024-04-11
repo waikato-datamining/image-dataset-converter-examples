@@ -1,9 +1,11 @@
 # Requirements
 
-Requires the [image-dataset-converter-imgstats](https://github.com/waikato-datamining/image-dataset-converter-imgstats) module.
+Requires the [image-dataset-converter-imgstats](https://github.com/waikato-datamining/image-dataset-converter-imgstats) library.
 
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
 *object detection* VOC XML dataset and extract it.
+
+# Plugins
 
 ## Label distribution
 

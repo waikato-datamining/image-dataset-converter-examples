@@ -3,7 +3,9 @@ Readers and writers for image classification have the `-ic` suffix.
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
 *image classification* dataset and extract it.
 
-# sub-dir to ADAMS
+# Plugins
+
+## sub-dir to ADAMS
 
 The following converts an image classification dataset from the sub-dir format
 (sub-directory names represent the image classification labels) into the 
@@ -22,7 +24,7 @@ idc-convert -l INFO \
 ```
 
 
-# sub-dir (randomized train/val/test splits)
+## sub-dir (randomized train/val/test splits)
 
 By enforcing batch-processing `--force_batch` and using the 
 `randomize-records` filter, randomized train/val/test splits

@@ -3,7 +3,9 @@ Readers and writers for image segmentation have the `-is` suffix.
 Download the blue channel archive of the [camvid](https://datasets.cms.waikato.ac.nz/ufdl/camvid/) dataset
 and extract it.
 
-# Blue channel to Indexed PNG
+# Plugins
+
+## Blue channel to Indexed PNG
 
 The following command-line will convert it into a dataset using indexed PNG files:
 
@@ -30,7 +32,7 @@ Here is an example (0001TP_007050.png):
 ![Example indexed PNG from the camvid dataset (0001TP_007050.png)](img/0001TP_007050.png)
 
 
-# Blue channel to Indexed PNG (cyclists only)
+## Blue channel to Indexed PNG (cyclists only)
 
 By applying filters, you can also generate subsets, e.g., for building more specialized models.
 The following will extract only images that have cyclists and discard all other annotations (`filter-labels`).

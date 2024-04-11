@@ -1,8 +1,10 @@
 # Requirements
 
-Requires the [image-dataset-converter-video](https://github.com/waikato-datamining/image-dataset-converter-video) module.
+Requires the [image-dataset-converter-video](https://github.com/waikato-datamining/image-dataset-converter-video) library.
 
-# Extract frames from video file
+# Plugins
+
+## Extract frames from video file
 
 The following extracts a total of 100 frames from `./input/video.mp4`, using every 
 20th frame and stores the images in the `./output` directory: 

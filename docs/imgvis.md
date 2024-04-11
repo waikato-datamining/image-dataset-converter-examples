@@ -3,6 +3,8 @@
 Requires the [image-dataset-converter-imgvis](https://github.com/waikato-datamining/image-dataset-converter-imgvis) module.
 
 
+# Plugins
+
 ## Annotation overlays (image classification)  
 
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 

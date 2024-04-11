@@ -3,7 +3,9 @@ Readers and writers for object detection have the `-od` suffix.
 Download the [17 flowers](https://datasets.cms.waikato.ac.nz/ufdl/17flowers/) 
 *object detection* VOC XML dataset and extract it.
 
-# VOC XML to MS COCO
+# Plugins
+
+## VOC XML to MS COCO
 
 The following converts the VOC XML dataset into MS COCO format, a format used by frameworks 
 like [Detectron2](https://github.com/facebookresearch/detectron2) or 
@@ -20,7 +22,7 @@ idc-convert \
     -o ./coco
 ```
 
-# VOC XML to YOLO (train/val/test splits)
+## VOC XML to YOLO (train/val/test splits)
 
 You can also split the data, e.g., into train, validation and test subsets.
 The following converts the VOC XML now into YOLO format:
