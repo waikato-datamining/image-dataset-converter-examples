@@ -59,7 +59,7 @@ docker run \
     --data /workspace/coco.yaml
 ```
 
-## image-dataset-converter
+## image-dataset-converter (direct prediction)
 
 The following pipeline loads every 2nd frame from the dashcam01.mp4 video,
 obtains predictions from the Yolov5 model (using the Redis backend), overlays the predictions
@@ -90,3 +90,36 @@ idc-convert \
     --size 800,224 \
     --delay 1
 ```
+
+## image-dataset-converter (via meta-sub-images)
+
+Like the above example, but uses the `meta-sub-images` filter to split the incoming images into two
+and sends them to the model one-by-one, then assembles the predictions and forwards them:
+
+```bash
+idc-convert \
+  -l INFO \
+  from-video-file \
+    -i ./dashcam01.mp4 \
+    -n 2 \
+    -t od \
+  meta-sub-images \
+    -l INFO \
+    -r 0,0,400,224 400,0,400,224 \
+    --base_filter "redis-predict-od --channel_out images --channel_in predictions --timeout 1.0" \
+  add-annotation-overlay-od \
+    --outline_alpha 255 \
+    --outline_thickness 1 \
+    --fill \
+    --fill_alpha 128 \
+    --vary_colors \
+    --font_size 10 \
+    --text_format "{label}: {score}" \
+    --text_placement T,L \
+    --force_bbox \
+  image-viewer \
+    --size 800,224 \
+    --delay 1
+```
+
+**NB:** Requires the [image-dataset-converter-imgaug](https://github.com/waikato-datamining/image-dataset-converter-imgaug) library.
