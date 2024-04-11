@@ -34,6 +34,11 @@ idc-convert \
     --split_ratios 70 15 15
 ```
 
+Here is an example of a processed image (image_0001.jpg):
+
+![Example image cropped and rotated](img/image_0001-cropped-rotated.jpg)
+
+
 ## Split images into smaller ones
 
 With the `sub-images` filter it is possible to split images into smaller ones or extract
