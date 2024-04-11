@@ -13,7 +13,7 @@ plugins:
     - search
 nav:
     - Home: index.md
-    - Core:
+    - Core library:
         - Image classification: image_classification.md
         - Object detection: object_detection.md
         - Image segmentation: image_segmentation.md
