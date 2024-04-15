@@ -491,6 +491,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#youtube-video" class="md-nav__link">
+    Youtube video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youtube-live-stream" class="md-nav__link">
+    Youtube live stream
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -581,6 +595,20 @@
           <li class="md-nav__item">
   <a href="#skipping-similar-frames" class="md-nav__link">
     Skipping similar frames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youtube-video" class="md-nav__link">
+    Youtube video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youtube-live-stream" class="md-nav__link">
+    Youtube live stream
   </a>
   
 </li>
@@ -698,6 +726,38 @@ determined by the <code>calc-frame-changes</code> filter.</p>
     -l INFO \
     -o ./output
 </code></pre>
+<h3 id="youtube-video">Youtube video<a class="headerlink" href="#youtube-video" title="Permanent link">#</a></h3>
+<p>The <code>from-youtube</code> reader allows you to grab frames from a Youtube video:</p>
+<pre><code class="language-bash">idc-convert \
+  -l INFO \
+  from-youtube \
+    -l INFO \
+    -i &quot;https://www.youtube.com/watch?v=CFdZWgiAj8I&quot; \
+    -p the_cloud-kitty_flanagan- \
+    -t od \
+    -n 20 \
+    -m 10 \
+  to-data \
+    -l INFO \
+    -o ./output
+</code></pre>
+<p><strong>NB:</strong> Please make sure not to infringe on any copyright.</p>
+<h3 id="youtube-live-stream">Youtube live stream<a class="headerlink" href="#youtube-live-stream" title="Permanent link">#</a></h3>
+<p>The <code>from-youtube-live</code> reader allows you to grab frames from a Youtube live stream, e.g., wildlife cameras:</p>
+<pre><code class="language-bash">idc-convert \
+  -l INFO \
+  from-youtube-live \
+    -l INFO \
+    -i &quot;https://www.youtube.com/watch?v=2swy9gysvOY&quot; \
+    -p african_river_wildlife_camera- \
+    -t od \
+    -n 20 \
+    -m 10 \
+  to-data \
+    -l INFO \
+    -o ./output
+</code></pre>
+<p><strong>NB:</strong> Please make sure not to infringe on any copyright.</p>
 
 
 
