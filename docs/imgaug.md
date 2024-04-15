@@ -41,6 +41,29 @@ Here is an example of a processed image (image_0001.jpg):
 ![Example image cropped and rotated](img/image_0001-cropped-rotated.jpg)
 
 
+## Convert VOC XML to MS COCO (resize)
+
+The following converts VOC XML annotations into smaller MS COCO ones, using a maximum 
+width of 300 while keeping the aspect ratio intact. The data also gets split into 
+train/validation/test:
+
+```bash
+idc-convert \
+  -l INFO \
+  from-voc-od \
+    -l INFO \
+    -i "./voc/*.xml" \
+  resize \
+    -W 300 \
+    -H keep-aspect-ratio \
+  to-coco-od \
+    -l INFO \
+    -o ./coco-split-small \
+    --split_names train val test \
+    --split_ratios 70 15 15
+```
+
+
 ## Split images into smaller ones
 
 With the `sub-images` filter it is possible to split images into smaller ones or extract
