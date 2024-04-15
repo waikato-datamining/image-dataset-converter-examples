@@ -110,3 +110,46 @@ idc-convert \
     -l INFO \
     -o ./output
 ```
+
+## Youtube video
+
+The `from-youtube` reader allows you to grab frames from a Youtube video:
+
+```bash
+idc-convert \
+  -l INFO \
+  from-youtube \
+    -l INFO \
+    -i "https://www.youtube.com/watch?v=CFdZWgiAj8I" \
+    -p the_cloud-kitty_flanagan- \
+    -t od \
+    -n 20 \
+    -m 10 \
+  to-data \
+    -l INFO \
+    -o ./output
+```
+
+**NB:** Please make sure not to infringe on any copyright.
+
+
+## Youtube live stream
+
+The `from-youtube-live` reader allows you to grab frames from a Youtube live stream, e.g., wildlife cameras:
+
+```bash
+idc-convert \
+  -l INFO \
+  from-youtube-live \
+    -l INFO \
+    -i "https://www.youtube.com/watch?v=2swy9gysvOY" \
+    -p african_river_wildlife_camera- \
+    -t od \
+    -n 20 \
+    -m 10 \
+  to-data \
+    -l INFO \
+    -o ./output
+```
+
+**NB:** Please make sure not to infringe on any copyright.
