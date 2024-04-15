@@ -408,6 +408,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#convert-voc-xml-to-ms-coco-resize" class="md-nav__link">
+    Convert VOC XML to MS COCO (resize)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#split-images-into-smaller-ones" class="md-nav__link">
     Split images into smaller ones
   </a>
@@ -537,6 +544,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#convert-voc-xml-to-ms-coco-resize" class="md-nav__link">
+    Convert VOC XML to MS COCO (resize)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#split-images-into-smaller-ones" class="md-nav__link">
     Split images into smaller ones
   </a>
@@ -602,6 +616,24 @@ with the annotations getting processed accordingly:</p>
 </code></pre>
 <p>Here is an example of a processed image (image_0001.jpg):</p>
 <p><img alt="Example image cropped and rotated" src="../img/image_0001-cropped-rotated.jpg" /></p>
+<h3 id="convert-voc-xml-to-ms-coco-resize">Convert VOC XML to MS COCO (resize)<a class="headerlink" href="#convert-voc-xml-to-ms-coco-resize" title="Permanent link">#</a></h3>
+<p>The following converts VOC XML annotations into smaller MS COCO ones, using a maximum 
+width of 300 while keeping the aspect ratio intact. The data also gets split into 
+train/validation/test:</p>
+<pre><code class="language-bash">idc-convert \
+  -l INFO \
+  from-voc-od \
+    -l INFO \
+    -i &quot;./voc/*.xml&quot; \
+  resize \
+    -W 300 \
+    -H keep-aspect-ratio \
+  to-coco-od \
+    -l INFO \
+    -o ./coco-split-small \
+    --split_names train val test \
+    --split_ratios 70 15 15
+</code></pre>
 <h3 id="split-images-into-smaller-ones">Split images into smaller ones<a class="headerlink" href="#split-images-into-smaller-ones" title="Permanent link">#</a></h3>
 <p>With the <code>sub-images</code> filter it is possible to split images into smaller ones or extract
 just specific regions of interest from images. The <code>idc-generate-regions</code> tool can be used
