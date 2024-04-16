@@ -1,6 +1,6 @@
 # Requirements
 
-Requires the [image-dataset-converter-redis-predictions](https://github.com/waikato-datamining/image-dataset-converter-redis-predictions) library.
+Requires the [image-dataset-converter-redis](https://github.com/waikato-datamining/image-dataset-converter-redis) library.
 
 
 # Object detection example

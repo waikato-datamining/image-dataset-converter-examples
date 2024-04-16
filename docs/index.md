@@ -25,5 +25,5 @@ Examples for the additional libraries:
 * [Image augmentation](imgaug.md)
 * [Image statistics](imgstats.md)
 * [Image visualizations](imgvis.md)
-* [Redis predictions](redis-predictions.md)
+* [Redis](redis.md)
 * [Video](video.md)
