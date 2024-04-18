@@ -106,6 +106,7 @@ idc-convert \
   meta-sub-images \
     -l INFO \
     -r 0,0,400,224 400,0,400,224 \
+    --merge_adjacent_polygons \
     --base_filter "redis-predict-od --channel_out images --channel_in predictions --timeout 1.0" \
   add-annotation-overlay-od \
     --outline_alpha 255 \
@@ -122,4 +123,8 @@ idc-convert \
     --delay 1
 ```
 
-**NB:** Requires the [image-dataset-converter-imgaug](https://github.com/waikato-datamining/image-dataset-converter-imgaug) library.
+**NB:** 
+
+* Requires the [image-dataset-converter-imgaug](https://github.com/waikato-datamining/image-dataset-converter-imgaug) library.
+* Meta-data of merged polygons gets lost apart from the label (`type`), which has to be the same, 
+  and any `score` values, which get averaged. 
