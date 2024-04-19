@@ -751,6 +751,7 @@ and sends them to the model one-by-one, then assembles the predictions and forwa
   meta-sub-images \
     -l INFO \
     -r 0,0,400,224 400,0,400,224 \
+    --merge_adjacent_polygons \
     --base_filter &quot;redis-predict-od --channel_out images --channel_in predictions --timeout 1.0&quot; \
   add-annotation-overlay-od \
     --outline_alpha 255 \
@@ -766,7 +767,12 @@ and sends them to the model one-by-one, then assembles the predictions and forwa
     --size 800,224 \
     --delay 1
 </code></pre>
-<p><strong>NB:</strong> Requires the <a href="https://github.com/waikato-datamining/image-dataset-converter-imgaug">image-dataset-converter-imgaug</a> library.</p>
+<p><strong>NB:</strong> </p>
+<ul>
+<li>Requires the <a href="https://github.com/waikato-datamining/image-dataset-converter-imgaug">image-dataset-converter-imgaug</a> library.</li>
+<li>Meta-data of merged polygons gets lost apart from the label (<code>type</code>), which has to be the same, 
+  and any <code>score</code> values, which get averaged. </li>
+</ul>
 
 
 
