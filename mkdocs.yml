@@ -20,6 +20,7 @@ nav:
         - Image segmentation: image_segmentation.md
         - Filter usage: filters.md
         - Docker usage: docker.md
+        - External functions: pyfunc.md
     - Additional libraries:
         - Image augmentation: imgaug.md
         - Image statistics: imgstats.md
