@@ -1,5 +1,5 @@
 Below are examples for using the image-dataset-converter library via its 
-[Docker images](https://github.com/waikato-datamining/image-dataset-converter/tree/main/docker).
+[Docker images](https://github.com/waikato-datamining/image-dataset-converter-all/tree/main/docker).
 
 
 # Interactive session
