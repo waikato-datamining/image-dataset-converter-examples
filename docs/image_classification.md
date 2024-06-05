@@ -40,7 +40,7 @@ idc-convert -l INFO --force_batch \
     -s 42 \
   to-subdir-ic \
     -l INFO \
-    -o ./adams-split \
+    -o ./subdir-split \
     --split_names train val test \
     --split_ratios 70 15 15
 ```
