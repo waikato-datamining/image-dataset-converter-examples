@@ -32,3 +32,39 @@ idc-convert -l INFO \
     --labels cat dog bunny bird \
     -o ./labelme
 ```
+
+## Object detection
+
+The following converts ADAMS object annotations to labelme `rectangle` shapes:
+
+```bash
+idc-convert -l INFO \
+  from-adams-od \
+    -l INFO \
+    -i ./adams/*.report \
+  coerce-box \
+  to-labelme-od \
+    -l INFO \
+    -o ./labelme
+```
+
+**NB:** `coerce-box` removes any polygon annotations and only leaves the bbox.
+
+
+## Instance segmentation
+
+The following converts ADAMS object annotations to labelme `polygon` shapes:
+
+```bash
+idc-convert -l INFO \
+  from-adams-od \
+    -l INFO \
+    -i ./adams/*.report \
+  coerce-mask \
+  to-labelme-od \
+    -l INFO \
+    -o ./labelme
+```
+
+**NB:** `coerce-mask` ensures that polygon annotations are present, even if it 
+is only the outline of a bbox.
