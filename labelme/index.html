@@ -505,6 +505,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#object-detection" class="md-nav__link">
+    Object detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-segmentation" class="md-nav__link">
+    Instance segmentation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -557,6 +571,31 @@ format and also specifies all possible labels:</p>
     --labels cat dog bunny bird \
     -o ./labelme
 </code></pre>
+<h3 id="object-detection">Object detection<a class="headerlink" href="#object-detection" title="Permanent link">#</a></h3>
+<p>The following converts ADAMS object annotations to labelme <code>rectangle</code> shapes:</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-adams-od \
+    -l INFO \
+    -i ./adams/*.report \
+  coerce-box \
+  to-labelme-od \
+    -l INFO \
+    -o ./labelme
+</code></pre>
+<p><strong>NB:</strong> <code>coerce-box</code> removes any polygon annotations and only leaves the bbox.</p>
+<h3 id="instance-segmentation">Instance segmentation<a class="headerlink" href="#instance-segmentation" title="Permanent link">#</a></h3>
+<p>The following converts ADAMS object annotations to labelme <code>polygon</code> shapes:</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-adams-od \
+    -l INFO \
+    -i ./adams/*.report \
+  coerce-mask \
+  to-labelme-od \
+    -l INFO \
+    -o ./labelme
+</code></pre>
+<p><strong>NB:</strong> <code>coerce-mask</code> ensures that polygon annotations are present, even if it 
+is only the outline of a bbox.</p>
 
 
 
