@@ -25,6 +25,8 @@ Examples for the additional libraries:
 * [Image augmentation](imgaug.md)
 * [Image statistics](imgstats.md)
 * [Image visualizations](imgvis.md)
+* [labelme](labelme.md)
+* [Paddle](paddle.md)
 * [PDF](pdf.md)
 * [Redis](redis.md)
 * [Video](video.md)
