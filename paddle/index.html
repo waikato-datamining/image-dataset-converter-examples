@@ -456,6 +456,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#image-segmentation" class="md-nav__link">
+    Image segmentation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -557,6 +564,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#image-segmentation" class="md-nav__link">
+    Image segmentation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -587,8 +601,23 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
 <p>Paddle support requires the <a href="https://github.com/waikato-datamining/image-dataset-converter-paddle">image-dataset-converter-paddle</a> library.</p>
 <h3 id="image-classification">Image classification<a class="headerlink" href="#image-classification" title="Permanent link">#</a></h3>
+<p>With the following command, a sub-dir structured is converted into Paddle
+format. The integer ID/label text mapping is stored in <code>./paddle/labels.map</code>,
+the label ID/file mapping in <code>files.txt</code> and the images are stored relatively
+to the output directory in the <code>jpg</code> sub-directory:</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-subdir-ic \
+    -l INFO \
+    -i ./subdir \
+  to-paddle-ic \
+    -l INFO \
+    -o ./paddle \
+    --id_label_map ./paddle/labels.map \
+    --file_label_map files.txt \
+    --relative_path jpg
+</code></pre>
 <p>The following converts all Paddle <code>.txt</code> files with image/label definitions 
-into sub-directory format:</p>
+back into sub-directory format:</p>
 <pre><code class="language-bash">idc-convert -l INFO \
   from-paddle-ic \
     -l INFO \
@@ -597,6 +626,27 @@ into sub-directory format:</p>
   to-subdir-ic \
     -l INFO \
     -o ./subdir/
+</code></pre>
+<h3 id="image-segmentation">Image segmentation<a class="headerlink" href="#image-segmentation" title="Permanent link">#</a></h3>
+<p>The following converts indexed PNGs into Paddle's image segmentation format:</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-indexed-png-is \
+    -l INFO \
+    -i ./indexed/*.png \
+    --labels l1 l2 l3 l4 \
+  to-paddle-is \
+    -l INFO \
+    -o ./paddle
+</code></pre>
+<p>And this command converts the Paddle format into indexed PNGs again:</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-paddle-is \
+    -l INFO \
+    -i ./paddle/*_list.txt \
+    --labels_file ./paddle/labels.txt \
+  to-indexed-png-is \
+    -l INFO \
+    -o ./indexed
 </code></pre>
 
 
