@@ -595,10 +595,9 @@ and <code>output</code> for storing the predictions in <a href="https://github.c
 <h3 id="speciesnet-model">SpeciesNet model<a class="headerlink" href="#speciesnet-model" title="Permanent link">#</a></h3>
 <p>Start the SpeciesNet model in Redis mode:</p>
 <ul>
-<li>
-<p>CUDA</p>
-<p><code>bash
-docker run --rm --gpus=all --shm-size 8G --net=host \
+<li>CUDA</li>
+</ul>
+<pre><code class="language-bash">docker run --rm --gpus=all --shm-size 8G --net=host \
   -u $(id -u):$(id -g) -e USER=$USER \
   -v `pwd`:/workspace \
   -v `pwd`/cache:/.cache \
@@ -608,12 +607,12 @@ docker run --rm --gpus=all --shm-size 8G --net=host \
   speciesnet_predict_redis \
     --redis_in images \
     --redis_out predictions \
-    --verbose</code></p>
-</li>
-<li>
-<p>CPU</p>
-<p><code>bash
-docker run --rm --shm-size 8G --net=host \
+    --verbose
+</code></pre>
+<ul>
+<li>CPU</li>
+</ul>
+<pre><code class="language-bash">docker run --rm --shm-size 8G --net=host \
   -u $(id -u):$(id -g) -e USER=$USER \
   -v `pwd`:/workspace \
   -v `pwd`/cache:/.cache \
@@ -623,9 +622,8 @@ docker run --rm --shm-size 8G --net=host \
   speciesnet_predict_redis \
     --redis_in images \
     --redis_out predictions \
-    --verbose</code></p>
-</li>
-</ul>
+    --verbose
+</code></pre>
 <h3 id="processing-single-video-file">Processing single video file<a class="headerlink" href="#processing-single-video-file" title="Permanent link">#</a></h3>
 <h4 id="determine-changes-between-frames">Determine changes between frames<a class="headerlink" href="#determine-changes-between-frames" title="Permanent link">#</a></h4>
 <p>If you want to skip similar frames, e.g., leaves moving in the wind, it pays 
