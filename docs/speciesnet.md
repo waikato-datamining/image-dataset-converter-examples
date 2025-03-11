@@ -11,7 +11,7 @@ Either one of the SpeciesNet Docker images:
 * [CPU](https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cpu)
 
 **NB:** If you haven't used Docker before, then have a look at 
-[this tutorial](https://www.data-mining.co.nz/docker-for-data-scientists/)
+[this tutorial](https://www.data-mining.co.nz/docker-for-data-scientists/).
 
 The following directory structure below your current directory:
 
