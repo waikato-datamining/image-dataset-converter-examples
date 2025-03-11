@@ -1,3 +1,7 @@
+In this example we will process trail cam videos, detect animals in them 
+using the [SpeciesNet](https://github.com/google/cameratrapai) model and 
+store the frames with detections for further use.
+
 # Requirements
 
 Requires the following libraries: 
