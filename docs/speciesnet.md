@@ -121,7 +121,7 @@ top two bins of the above histogram.
 
 ### Extracting frames
 
-With the threshold for our video determine, we can now extract relevant 
+With the threshold for our video determined, we can now extract relevant 
 frames and push them through the SpeciesNet model.
 
 The following command processes `VID0003.AVI` from the `input` directory (`from-video-file`),
