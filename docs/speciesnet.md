@@ -37,35 +37,35 @@ Start the SpeciesNet model in Redis mode:
 
 * CUDA
     
-    ```bash
-    docker run --rm --gpus=all --shm-size 8G --net=host \
-      -u $(id -u):$(id -g) -e USER=$USER \
-      -v `pwd`:/workspace \
-      -v `pwd`/cache:/.cache \
-      -v `pwd`/config:/.config \
-      -v `pwd`/cache:/.torch \
-      -it waikatodatamining/speciesnet:4.0.1_cuda12.1
-      speciesnet_predict_redis \
-        --redis_in images \
-        --redis_out predictions \
-        --verbose
-    ```
+```bash
+docker run --rm --gpus=all --shm-size 8G --net=host \
+  -u $(id -u):$(id -g) -e USER=$USER \
+  -v `pwd`:/workspace \
+  -v `pwd`/cache:/.cache \
+  -v `pwd`/config:/.config \
+  -v `pwd`/cache:/.torch \
+  -it waikatodatamining/speciesnet:4.0.1_cuda12.1
+  speciesnet_predict_redis \
+    --redis_in images \
+    --redis_out predictions \
+    --verbose
+```
 
 * CPU
      
-    ```bash
-    docker run --rm --shm-size 8G --net=host \
-      -u $(id -u):$(id -g) -e USER=$USER \
-      -v `pwd`:/workspace \
-      -v `pwd`/cache:/.cache \
-      -v `pwd`/config:/.config \
-      -v `pwd`/cache:/.torch \
-      -it waikatodatamining/speciesnet:4.0.1_cpu \
-      speciesnet_predict_redis \
-        --redis_in images \
-        --redis_out predictions \
-        --verbose
-    ```
+```bash
+docker run --rm --shm-size 8G --net=host \
+  -u $(id -u):$(id -g) -e USER=$USER \
+  -v `pwd`:/workspace \
+  -v `pwd`/cache:/.cache \
+  -v `pwd`/config:/.config \
+  -v `pwd`/cache:/.torch \
+  -it waikatodatamining/speciesnet:4.0.1_cpu \
+  speciesnet_predict_redis \
+    --redis_in images \
+    --redis_out predictions \
+    --verbose
+```
 
 
 ## Processing single video file
