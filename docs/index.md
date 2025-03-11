@@ -30,3 +30,7 @@ Examples for the additional libraries:
 * [PDF](pdf.md)
 * [Redis](redis.md)
 * [Video](video.md)
+
+Practical examples:
+
+* [Detecting animals in trail cameras (SpeciesNet)](speciesnet.md)
