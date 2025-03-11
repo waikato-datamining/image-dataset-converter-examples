@@ -536,17 +536,16 @@
     Requirements
   </a>
   
-    <nav class="md-nav" aria-label="Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#speciesnet-model" class="md-nav__link">
     SpeciesNet model
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#processing-single-video-file" class="md-nav__link">
     Processing single video file
   </a>
@@ -572,16 +571,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#processing-multiple-video-files" class="md-nav__link">
     Processing multiple video files
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -629,17 +623,16 @@
     Requirements
   </a>
   
-    <nav class="md-nav" aria-label="Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#speciesnet-model" class="md-nav__link">
     SpeciesNet model
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#processing-single-video-file" class="md-nav__link">
     Processing single video file
   </a>
@@ -665,16 +658,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#processing-multiple-video-files" class="md-nav__link">
     Processing multiple video files
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -706,6 +694,9 @@
 <li><a href="https://github.com/waikato-datamining/image-dataset-converter-redis">image-dataset-converter-redis</a></li>
 <li><a href="https://github.com/waikato-datamining/image-dataset-converter-video">image-dataset-converter-video</a></li>
 </ul>
+<p>Or simply install <code>image-dataset-converter-all&gt;=0.0.8</code>:</p>
+<pre><code class="language-bash">pip install &quot;image-dataset-converter-all&gt;=0.0.8&quot;
+</code></pre>
 <p>Either one of the SpeciesNet Docker images:</p>
 <ul>
 <li><a href="https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cuda12.1">CUDA</a></li>
@@ -727,7 +718,7 @@
 <p>With <code>input</code> containing one or more video files in AVI format,
 and <code>output</code> for storing the predictions in <a href="https://github.com/waikato-datamining/fast-opex">OPEX format</a>.</p>
 <p><strong>NB:</strong> MP4 files can be processed as well. </p>
-<h3 id="speciesnet-model">SpeciesNet model<a class="headerlink" href="#speciesnet-model" title="Permanent link">#</a></h3>
+<h2 id="speciesnet-model">SpeciesNet model<a class="headerlink" href="#speciesnet-model" title="Permanent link">#</a></h2>
 <p>Start the SpeciesNet model in Redis mode:</p>
 <ul>
 <li>CUDA</li>
@@ -759,8 +750,8 @@ and <code>output</code> for storing the predictions in <a href="https://github.c
     --redis_out predictions \
     --verbose
 </code></pre>
-<h3 id="processing-single-video-file">Processing single video file<a class="headerlink" href="#processing-single-video-file" title="Permanent link">#</a></h3>
-<h4 id="determine-changes-between-frames">Determine changes between frames<a class="headerlink" href="#determine-changes-between-frames" title="Permanent link">#</a></h4>
+<h2 id="processing-single-video-file">Processing single video file<a class="headerlink" href="#processing-single-video-file" title="Permanent link">#</a></h2>
+<h3 id="determine-changes-between-frames">Determine changes between frames<a class="headerlink" href="#determine-changes-between-frames" title="Permanent link">#</a></h3>
 <p>If you want to skip similar frames, e.g., leaves moving in the wind, it pays 
 to look at the frame changes in a video using the <code>calc-frame-changes</code> filter.
 However, if you are looking for small animals like rodents, you may need to 
@@ -800,7 +791,7 @@ required:</p>
 </code></pre>
 <p>Using the threshold <code>5.35e-06</code>, you will skip frames that would fall into the 
 top two bins of the above histogram.</p>
-<h4 id="extracting-frames">Extracting frames<a class="headerlink" href="#extracting-frames" title="Permanent link">#</a></h4>
+<h3 id="extracting-frames">Extracting frames<a class="headerlink" href="#extracting-frames" title="Permanent link">#</a></h3>
 <p>With the threshold for our video determined, we can now extract relevant 
 frames and push them through the SpeciesNet model.</p>
 <p>The following command processes <code>VID0003.AVI</code> from the <code>input</code> directory (<code>from-video-file</code>),
@@ -835,7 +826,7 @@ and stores any images with predictions in the <code>output</code> directory in
     -l INFO \
     -o ./output
 </code></pre>
-<h3 id="processing-multiple-video-files">Processing multiple video files<a class="headerlink" href="#processing-multiple-video-files" title="Permanent link">#</a></h3>
+<h2 id="processing-multiple-video-files">Processing multiple video files<a class="headerlink" href="#processing-multiple-video-files" title="Permanent link">#</a></h2>
 <p>The <code>from-video-file</code> reader is not limited to just processing a single file,
 e.g., you can supply multiple file names to the <code>-i</code> option or use a <em>glob</em> 
 like <code>*.AVI</code>. However, with different videos having different lighting and
