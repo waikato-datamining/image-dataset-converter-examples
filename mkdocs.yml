@@ -29,3 +29,5 @@ nav:
         - PDF: pdf.md
         - Redis: redis.md
         - Video: video.md
+    - Practical examples:
+        - SpeciesNet: speciesnet.md
