@@ -5,6 +5,12 @@ Requires the following libraries:
 * [image-dataset-converter-redis](https://github.com/waikato-datamining/image-dataset-converter-redis)
 * [image-dataset-converter-video](https://github.com/waikato-datamining/image-dataset-converter-video)
 
+Or simply install `image-dataset-converter-all>=0.0.8`:
+
+```bash
+pip install "image-dataset-converter-all>=0.0.8"
+```
+
 Either one of the SpeciesNet Docker images:
 
 * [CUDA](https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cuda12.1)
@@ -33,7 +39,7 @@ and `output` for storing the predictions in [OPEX format](https://github.com/wai
 **NB:** MP4 files can be processed as well. 
 
 
-## SpeciesNet model
+# SpeciesNet model
 
 Start the SpeciesNet model in Redis mode:
 
@@ -70,9 +76,9 @@ docker run --rm --shm-size 8G --net=host \
 ```
 
 
-## Processing single video file
+# Processing single video file
 
-### Determine changes between frames
+## Determine changes between frames
 
 If you want to skip similar frames, e.g., leaves moving in the wind, it pays 
 to look at the frame changes in a video using the `calc-frame-changes` filter.
@@ -121,7 +127,7 @@ This will output a histogram similar to this:
 Using the threshold `5.35e-06`, you will skip frames that would fall into the 
 top two bins of the above histogram.
 
-### Extracting frames
+## Extracting frames
 
 With the threshold for our video determined, we can now extract relevant 
 frames and push them through the SpeciesNet model.
@@ -162,7 +168,7 @@ idc-convert -l INFO \
 ```
 
 
-## Processing multiple video files
+# Processing multiple video files
 
 The `from-video-file` reader is not limited to just processing a single file,
 e.g., you can supply multiple file names to the `-i` option or use a *glob* 
