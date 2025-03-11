@@ -27,8 +27,10 @@ The following directory structure below your current directory:
   +- output 
 ```
 
-With `input` containing one or more video files in MP4 or AVI format,
+With `input` containing one or more video files in AVI format,
 and `output` for storing the predictions in [OPEX format](https://github.com/waikato-datamining/fast-opex).
+
+**NB:** MP4 files can be processed as well. 
 
 
 ## SpeciesNet model
