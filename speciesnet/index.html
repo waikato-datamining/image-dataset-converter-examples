@@ -579,6 +579,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#visualizing-the-predictions" class="md-nav__link">
+    Visualizing the predictions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -662,6 +669,13 @@
         <li class="md-nav__item">
   <a href="#processing-multiple-video-files" class="md-nav__link">
     Processing multiple video files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-predictions" class="md-nav__link">
+    Visualizing the predictions
   </a>
   
 </li>
@@ -866,6 +880,20 @@ directory and retrieves one frame for every second of video footage (<code>-f 1<
   to-opex-od \
     -l INFO \
     -o ./output
+</code></pre>
+<h2 id="visualizing-the-predictions">Visualizing the predictions<a class="headerlink" href="#visualizing-the-predictions" title="Permanent link">#</a></h2>
+<p>If you want to quickly generate some composite images, you can use the 
+following command. It will create a new directory <code>overlays</code> in which
+it will save the generated images.</p>
+<pre><code class="language-bash">idc-convert -l INFO \
+  from-opex-od \
+    -l INFO \
+    -i &quot;./output/*.json&quot; \
+  add-annotation-overlay-od \
+    -l INFO \
+  to-data \
+    -l INFO \
+    -o ./overlays
 </code></pre>
 
 
