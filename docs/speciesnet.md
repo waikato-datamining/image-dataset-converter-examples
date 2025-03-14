@@ -216,3 +216,21 @@ idc-convert -l INFO \
     -l INFO \
     -o ./output
 ```
+
+# Visualizing the predictions
+
+If you want to quickly generate some composite images, you can use the 
+following command. It will create a new directory `overlays` in which
+it will save the generated images.
+
+```bash
+idc-convert -l INFO \
+  from-opex-od \
+    -l INFO \
+    -i "./output/*.json" \
+  add-annotation-overlay-od \
+    -l INFO \
+  to-data \
+    -l INFO \
+    -o ./overlays
+```
