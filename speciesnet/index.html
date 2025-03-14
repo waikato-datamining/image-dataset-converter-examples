@@ -700,6 +700,11 @@ store the frames with detections for further use.</p>
 <p>Or simply install <code>image-dataset-converter-all&gt;=0.0.8</code>:</p>
 <pre><code class="language-bash">pip install &quot;image-dataset-converter-all&gt;=0.0.8&quot;
 </code></pre>
+<p>Since we are using <a href="https://redis.io/">Redis</a> as a backend for exchanging
+images and predictions, you either have to have it installed on your system
+or you can run it in a Docker container as follows:</p>
+<pre><code class="language-bash">docker run --net=host --name redis-server -d redis
+</code></pre>
 <p>Either one of the SpeciesNet Docker images:</p>
 <ul>
 <li><a href="https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cuda12.1">CUDA</a></li>
