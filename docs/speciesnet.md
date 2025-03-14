@@ -15,6 +15,14 @@ Or simply install `image-dataset-converter-all>=0.0.8`:
 pip install "image-dataset-converter-all>=0.0.8"
 ```
 
+Since we are using [Redis](https://redis.io/) as a backend for exchanging
+images and predictions, you either have to have it installed on your system
+or you can run it in a Docker container as follows:
+
+```bash
+docker run --net=host --name redis-server -d redis
+```
+
 Either one of the SpeciesNet Docker images:
 
 * [CUDA](https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cuda12.1)
