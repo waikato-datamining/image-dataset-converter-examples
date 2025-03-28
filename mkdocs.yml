@@ -19,6 +19,7 @@ nav:
         - Object detection: object_detection.md
         - Image segmentation: image_segmentation.md
         - Filter usage: filters.md
+        - Placeholders: placeholders.md
         - Docker usage: docker.md
         - External functions: pyfunc.md
         - Multiple I/O: multi.md
