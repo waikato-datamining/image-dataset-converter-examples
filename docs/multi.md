@@ -6,7 +6,7 @@ of different types need to generated for different frameworks (*multiple outputs
 To cater for these scenarios, the following two meta plugins are available:
 
 * `from-multi` - reads from one or more sources using the specified readers
-* `to-multi` - forwards the incoming data to the one or more writers
+* `to-multi` - forwards the incoming data to one or more writers
 
 There is one restriction, each of the base reader/writer must be from the
 same data domain.
@@ -14,8 +14,8 @@ same data domain.
 
 # Multiple inputs
 
-The following command reads a dataset in ADAMS object detection format
-and MS COCO, with the combined output being saved in OPEX JSON format:
+The following command reads a dataset in [ADAMS object detection](https://github.com/waikato-datamining/image-dataset-converter/blob/main/formats/adams.md) format
+and [MS COCO](https://cocodataset.org/#format-data), with the combined output being saved in [OPEX JSON](https://github.com/WaikatoLink2020/objdet-predictions-exchange-format) format:
 
 ```bash
 idc-convert \
@@ -32,8 +32,9 @@ idc-convert \
 
 # Multiple outputs
 
-Below, the source data is in ADAMS object detection format and will be
-converted to OPEX JSON and MS COCO:
+Below, the source data is in [ADAMS object detection](https://github.com/waikato-datamining/image-dataset-converter/blob/main/formats/adams.md) format and will be
+converted to [OPEX JSON](https://github.com/WaikatoLink2020/objdet-predictions-exchange-format) 
+and [MS COCO](https://cocodataset.org/#format-data):
 
 ```bash
 idc-convert \
