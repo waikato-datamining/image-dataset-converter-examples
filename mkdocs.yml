@@ -21,6 +21,7 @@ nav:
         - Filter usage: filters.md
         - Docker usage: docker.md
         - External functions: pyfunc.md
+        - Multiple I/O: multi.md
     - Additional libraries:
         - Image augmentation: imgaug.md
         - Image statistics: imgstats.md
