@@ -698,26 +698,22 @@ get expanded dynamically at runtime, taking the current state into account.</p>
 <ul>
 <li>
 <p><strong>System-defined</strong> ones: </p>
-</li>
-<li>
-<p><code>{HOME}</code> - the user's home directory</p>
-</li>
+<ul>
+<li><code>{HOME}</code> - the user's home directory</li>
 <li><code>{CWD}</code> - the current working directory</li>
-<li>
-<p><code>{TMP}</code> - the temporary directory</p>
+<li><code>{TMP}</code> - the temporary directory</li>
+</ul>
 </li>
 <li>
 <p><strong>Input-based</strong> ones, which are based on the current input file being processed:</p>
-</li>
-<li>
-<p><code>{INPUT_PATH}</code> - the directory component of the current file</p>
-</li>
+<ul>
+<li><code>{INPUT_PATH}</code> - the directory component of the current file</li>
 <li><code>{INPUT_NAMEEXT}</code> - the name (incl ext) of the current file</li>
 <li><code>{INPUT_NAMENOEXT}</code> - the name (excl ext) of the current file</li>
 <li><code>{INPUT_EXT}</code> - the extension of the current file</li>
 <li><code>{INPUT_PARENT_PATH}</code> - the path of the file's parent</li>
-<li>
-<p><code>{INPUT_PARENT_NAME}</code> - the name of the file's parent</p>
+<li><code>{INPUT_PARENT_NAME}</code> - the name of the file's parent</li>
+</ul>
 </li>
 <li>
 <p><strong>User-defined</strong> ones, which are supplied to the tool itself, e.g., via the
