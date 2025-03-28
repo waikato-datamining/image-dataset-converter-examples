@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/placeholders/</loc>
+         <lastmod>2025-03-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/pyfunc/</loc>
          <lastmod>2025-03-28</lastmod>
          <changefreq>daily</changefreq>

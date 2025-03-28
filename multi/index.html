@@ -308,6 +308,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../placeholders/" class="md-nav__link">
+        Placeholders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
         Docker usage
       </a>
@@ -641,13 +655,13 @@ of different types need to generated for different frameworks (<em>multiple outp
 <p>To cater for these scenarios, the following two meta plugins are available:</p>
 <ul>
 <li><code>from-multi</code> - reads from one or more sources using the specified readers</li>
-<li><code>to-multi</code> - forwards the incoming data to the one or more writers</li>
+<li><code>to-multi</code> - forwards the incoming data to one or more writers</li>
 </ul>
 <p>There is one restriction, each of the base reader/writer must be from the
 same data domain.</p>
 <h2 id="multiple-inputs">Multiple inputs<a class="headerlink" href="#multiple-inputs" title="Permanent link">#</a></h2>
-<p>The following command reads a dataset in ADAMS object detection format
-and MS COCO, with the combined output being saved in OPEX JSON format:</p>
+<p>The following command reads a dataset in <a href="https://github.com/waikato-datamining/image-dataset-converter/blob/main/formats/adams.md">ADAMS object detection</a> format
+and <a href="https://cocodataset.org/#format-data">MS COCO</a>, with the combined output being saved in <a href="https://github.com/WaikatoLink2020/objdet-predictions-exchange-format">OPEX JSON</a> format:</p>
 <pre><code class="language-bash">idc-convert \
   -l INFO \
   from-multi \
@@ -660,8 +674,9 @@ and MS COCO, with the combined output being saved in OPEX JSON format:</p>
     -o &quot;{CWD}/output&quot;
 </code></pre>
 <h2 id="multiple-outputs">Multiple outputs<a class="headerlink" href="#multiple-outputs" title="Permanent link">#</a></h2>
-<p>Below, the source data is in ADAMS object detection format and will be
-converted to OPEX JSON and MS COCO:</p>
+<p>Below, the source data is in <a href="https://github.com/waikato-datamining/image-dataset-converter/blob/main/formats/adams.md">ADAMS object detection</a> format and will be
+converted to <a href="https://github.com/WaikatoLink2020/objdet-predictions-exchange-format">OPEX JSON</a> 
+and <a href="https://cocodataset.org/#format-data">MS COCO</a>:</p>
 <pre><code class="language-bash">idc-convert \
   -l INFO \
   from-adams-od \
