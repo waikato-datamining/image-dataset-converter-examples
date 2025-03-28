@@ -10,18 +10,18 @@ There are different types of placeholders:
 
 * **System-defined** ones: 
 
-  * `{HOME}` - the user's home directory
-  * `{CWD}` - the current working directory
-  * `{TMP}` - the temporary directory
+    * `{HOME}` - the user's home directory
+    * `{CWD}` - the current working directory
+    * `{TMP}` - the temporary directory
 
 * **Input-based** ones, which are based on the current input file being processed:
 
-  * `{INPUT_PATH}` - the directory component of the current file
-  * `{INPUT_NAMEEXT}` - the name (incl ext) of the current file
-  * `{INPUT_NAMENOEXT}` - the name (excl ext) of the current file
-  * `{INPUT_EXT}` - the extension of the current file
-  * `{INPUT_PARENT_PATH}` - the path of the file's parent
-  * `{INPUT_PARENT_NAME}` - the name of the file's parent
+    * `{INPUT_PATH}` - the directory component of the current file
+    * `{INPUT_NAMEEXT}` - the name (incl ext) of the current file
+    * `{INPUT_NAMENOEXT}` - the name (excl ext) of the current file
+    * `{INPUT_EXT}` - the extension of the current file
+    * `{INPUT_PARENT_PATH}` - the path of the file's parent
+    * `{INPUT_PARENT_NAME}` - the name of the file's parent
 
 * **User-defined** ones, which are supplied to the tool itself, e.g., via the
   `-p/--placeholders` option of the `idc-convert` tool. The same script can
