@@ -365,13 +365,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#sub-pipelines" class="md-nav__link">
-    Sub-pipelines
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -689,13 +682,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#sub-pipelines" class="md-nav__link">
-    Sub-pipelines
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -779,21 +765,6 @@ dimension-discarder \
 <li><code>rename</code> - allows renaming of images, e.g., prefixing them with a batch number/ID</li>
 <li><code>sample</code> - for selecting a random sub-sample from the stream</li>
 </ul>
-<h3 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h3>
-<p>With the <code>tee</code> meta-filter, it is possible to filter the images coming through with a separate
-sub-pipeline. E.g., converting the incoming data into multiple output formats.</p>
-<p>The following command loads the VOC XML annotations and saves them in ADAMS and YOLO format
-in one command:</p>
-<pre><code class="language-bash">idc-convert \
-  -l INFO \
-  from-voc-od \
-    -l INFO \
-    -i &quot;./voc/*.xml&quot; \
-  tee \
-    -f &quot;to-adams-od -o ./adams-tee/&quot; \
-  tee \
-    -f &quot;to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt&quot;
-</code></pre>
 
 
 

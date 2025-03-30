@@ -393,6 +393,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -626,6 +633,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -687,6 +701,22 @@ and <a href="https://cocodataset.org/#format-data">MS COCO</a>:</p>
     -t od \
     -w &quot;to-opex-od -l INFO -o {CWD}/output/opex&quot; \
        &quot;to-coco-od -l INFO -o {CWD}/output/coco&quot;
+</code></pre>
+<h2 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h2>
+<p>With the <code>tee</code> meta-filter, it is possible to filter the images coming through with a separate
+sub-pipeline. That allows converting the incoming data into multiple output formats with
+their own preprocessing.</p>
+<p>The following command loads the VOC XML annotations and saves them in ADAMS and YOLO format
+in one command, but each scaled differently:</p>
+<pre><code class="language-bash">idc-convert \
+  -l INFO \
+  from-voc-od \
+    -l INFO \
+    -i &quot;./voc/*.xml&quot; \
+  tee \
+    -f &quot;scale -m replace -T 0 -f 0.5 -t 0.5 -u to-adams-od -o ./adams-tee/&quot; \
+  tee \
+    -f &quot;scale -m replace -T 0 -f 0.25 -t 0.25 -u to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt&quot;
 </code></pre>
 
 
