@@ -70,24 +70,3 @@ A number of generic record management filters are available:
 * `record-window` - only lets a certain window of records pass through (e.g., the first 1000)
 * `rename` - allows renaming of images, e.g., prefixing them with a batch number/ID
 * `sample` - for selecting a random sub-sample from the stream
-
-
-## Sub-pipelines
-
-With the `tee` meta-filter, it is possible to filter the images coming through with a separate
-sub-pipeline. E.g., converting the incoming data into multiple output formats.
-
-The following command loads the VOC XML annotations and saves them in ADAMS and YOLO format
-in one command:
-
-```bash
-idc-convert \
-  -l INFO \
-  from-voc-od \
-    -l INFO \
-    -i "./voc/*.xml" \
-  tee \
-    -f "to-adams-od -o ./adams-tee/" \
-  tee \
-    -f "to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt"
-```

@@ -48,3 +48,25 @@ idc-convert \
     -w "to-opex-od -l INFO -o {CWD}/output/opex" \
        "to-coco-od -l INFO -o {CWD}/output/coco"
 ```
+
+
+# Sub-pipelines
+
+With the `tee` meta-filter, it is possible to filter the images coming through with a separate
+sub-pipeline. That allows converting the incoming data into multiple output formats with
+their own preprocessing.
+
+The following command loads the VOC XML annotations and saves them in ADAMS and YOLO format
+in one command, but each scaled differently:
+
+```bash
+idc-convert \
+  -l INFO \
+  from-voc-od \
+    -l INFO \
+    -i "./voc/*.xml" \
+  tee \
+    -f "scale -m replace -T 0 -f 0.5 -t 0.5 -u to-adams-od -o ./adams-tee/" \
+  tee \
+    -f "scale -m replace -T 0 -f 0.25 -t 0.25 -u to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt"
+```
