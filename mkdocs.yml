@@ -29,6 +29,7 @@ nav:
         - Image visualizations: imgvis.md
         - Paddle: paddle.md
         - PDF: pdf.md
+        - PlantCV: plantcv.md
         - Redis: redis.md
         - Video: video.md
     - Practical examples:
