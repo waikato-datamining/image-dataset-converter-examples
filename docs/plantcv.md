@@ -21,19 +21,19 @@ idc-convert \
     -l INFO \
     -t od \
     -i {CWD}/input/plant_binary.png
-  dilate \
+  pcv-dilate \
     -k 3 \
     -i 1 \
-  erode \
+  pcv-erode \
     -k 3 \
     -i 1 \
-  fill \
+  pcv-fill \
     -s 30 \
-  fill-holes \
-  skeletonize \
+  pcv-fill-holes \
+  pcv-skeletonize \
     -p \
     -s 50 \
-  skeletonize \
+  pcv-skeletonize \
     -p \
     -s 50 \
   to-data \
@@ -57,19 +57,19 @@ idc-convert \
     -l INFO \
     -t od \
     -i {CWD}/input/plant_binary.png
-  dilate \
+  pcv-dilate \
     -k 3 \
     -i 1 \
-  erode \
+  pcv-erode \
     -k 3 \
     -i 1 \
-  fill \
+  pcv-fill \
     -s 30 \
-  fill-holes \
-  skeletonize \
+  pcv-fill-holes \
+  pcv-skeletonize \
     -p \
     -s 50 \
-  find-branch-points \
+  pcv-find-branch-points \
   to-adams-od \
     -l INFO \
     -o {CWD}/output
