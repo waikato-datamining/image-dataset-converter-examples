@@ -70,10 +70,18 @@ idc-convert \
     -p \
     -s 50 \
   pcv-find-branch-points \
-  to-adams-od \
+  any-to-rgb \
+  add-annotation-overlay-od \
+    --text_format="" \
+    --outline_thickness 3 \
+    --bbox_outline_outwards \
+    -c 255,0,0 \
+  to-data \
     -l INFO \
     -o {CWD}/output
 ```
+
+**NB::** `add-annotation-overlay-od` requires the [imgvis](imgvis.md) plugins.
 
 Generates the following output (annotations overlaid onto skeletonized image):
 
