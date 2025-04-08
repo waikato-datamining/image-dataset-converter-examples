@@ -746,10 +746,17 @@
     -p \
     -s 50 \
   pcv-find-branch-points \
-  to-adams-od \
+  any-to-rgb \
+  add-annotation-overlay-od \
+    --text_format=&quot;&quot; \
+    --outline_thickness 3 \
+    --bbox_outline_outwards \
+    -c 255,0,0 \
+  to-data \
     -l INFO \
     -o {CWD}/output
 </code></pre>
+<p><strong>NB::</strong> <code>add-annotation-overlay-od</code> requires the <a href="../imgvis/">imgvis</a> plugins.</p>
 <p>Generates the following output (annotations overlaid onto skeletonized image):</p>
 <p><img alt="Composite image of skeletonized plant image with branch locations (plant_binary-branches.png)" src="../img/plant_binary-branches.png" /></p>
 
