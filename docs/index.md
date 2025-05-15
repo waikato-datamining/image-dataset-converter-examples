@@ -26,6 +26,7 @@ Examples for the additional libraries:
 * [Image statistics](imgstats.md)
 * [Image visualizations](imgvis.md)
 * [labelme](labelme.md)
+* [MiDaS](midas.md)
 * [Paddle](paddle.md)
 * [PDF](pdf.md)
 * [Redis](redis.md)
