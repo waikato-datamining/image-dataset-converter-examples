@@ -1,4 +1,4 @@
-This example shows how to apply the [MiDaS](https://github.com/isl-org/MiDaS)
+This example shows how to apply a [MiDaS](https://github.com/isl-org/MiDaS)
 monocular depth estimation model to images from a video and displays the 
 depth information as grayscale images.
 
