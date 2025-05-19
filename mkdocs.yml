@@ -27,8 +27,7 @@ nav:
         - Image augmentation: imgaug.md
         - Image statistics: imgstats.md
         - Image visualizations: imgvis.md
-        - labelme: paddle.md
-        - MiDaS: midas.md
+        - labelme: labelme.md
         - Paddle: paddle.md
         - PDF: pdf.md
         - PlantCV: plantcv.md
