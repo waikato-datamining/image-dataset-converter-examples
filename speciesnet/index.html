@@ -670,6 +670,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#redirecting-frames-based-on-detected-labels" class="md-nav__link">
+    Redirecting frames based on detected labels
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -760,6 +767,13 @@
         <li class="md-nav__item">
   <a href="#visualizing-the-predictions" class="md-nav__link">
     Visualizing the predictions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirecting-frames-based-on-detected-labels" class="md-nav__link">
+    Redirecting frames based on detected labels
   </a>
   
 </li>
@@ -978,6 +992,39 @@ it will save the generated images.</p>
   to-data \
     -l INFO \
     -o ./overlays
+</code></pre>
+<h2 id="redirecting-frames-based-on-detected-labels">Redirecting frames based on detected labels<a class="headerlink" href="#redirecting-frames-based-on-detected-labels" title="Permanent link">#</a></h2>
+<p>When identifying species in a frame, it can be helpful automatically sorting the
+frames into sub-directories based on the labels that were identified within 
+the frame. This can be done by utilizing the <a href="../placeholders/">placeholder functionality</a>.
+For this to work, we need to employ two plugins: first, the label needs to be transferred
+into the metadata of the data container using the <code>label-to-metadata</code> plugin. This
+plugin outputs a container for as many labels there are in the data container, which
+can be none, one or many in case of object detection. Second, the metadata value
+needs to be turned into a placeholder using the <code>metadata-to-placeholder</code> plugin.</p>
+<p>Therefore, we can change the output part of the <a href="#extracting-frames">Extracting frames</a> 
+pipeline from:</p>
+<pre><code class="language-bash">  ...
+  discard-negatives \
+    -l INFO \
+  to-opex-od \
+    -l INFO \
+    -o ./output
+</code></pre>
+<p>To this:</p>
+<pre><code class="language-bash">  ...
+  discard-negatives \
+    -l INFO \
+  label-to-metadata \
+    -l INFO \
+    -k type \
+  metadata-to-placeholder \
+    -l INFO \
+    -k type \
+    -p TYPE \    
+  to-opex-od \
+    -l INFO \
+    -o ./output/{TYPE}
 </code></pre>
 
 
