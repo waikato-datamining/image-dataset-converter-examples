@@ -36,6 +36,9 @@ There are different types of placeholders:
   directory associated with them anymore, only a file name. That renders all
   the input-based placeholders unusable. Using `set-placeholders` beforehand
   allows *saving* the input directory in another placeholder for later use.
+  Meta-data can be used as placeholders as well using the `metadata-to-placeholder`
+  plugin, which extracts a particular key from the metadata passing through
+  and updates the specified placeholder accordingly.
 
 
 # Examples
