@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/depth_estimation_in_videos/</loc>
+         <lastmod>2025-05-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/docker/</loc>
          <lastmod>2025-05-19</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +57,11 @@
     </url>
     <url>
          <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/object_detection/</loc>
+         <lastmod>2025-05-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.data-mining.co.nz/image-dataset-converter-examples/object_detection_in_videos/</loc>
          <lastmod>2025-05-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
