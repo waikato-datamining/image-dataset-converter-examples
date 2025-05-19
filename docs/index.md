@@ -34,5 +34,5 @@ Examples for the additional libraries:
 Practical examples:
 
 * [Detecting animals in trail cameras (SpeciesNet)](speciesnet.md)
-* [Depth estimation in videos](depth_estimation_in_videos.md)
-* [Object detection in videos](object_detection_in_videos.md)
+* [Depth estimation in videos (MiDaS)](depth_estimation_in_videos.md)
+* [Object detection in videos (Yolov5)](object_detection_in_videos.md)
