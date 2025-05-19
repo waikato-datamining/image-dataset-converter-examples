@@ -34,4 +34,6 @@ nav:
         - Redis: redis.md
         - Video: video.md
     - Practical examples:
+        - Depth estimation in videos: depth_estimation_in_videos.md
+        - Objeft detection in videos: object_detection_in_videos.md
         - SpeciesNet: speciesnet.md
