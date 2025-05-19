@@ -25,7 +25,7 @@ idc-convert \
 
 Though the data type is *object detection* (`-t od`), this is not really relevant in this
 example. If there were other filters, e.g., for applying object detection 
-[Redis models](redis.md),
+[models via Redis](object_detection_in_videos.md),
 then it would be necessary to specify the correct type.
 
 
