@@ -55,7 +55,7 @@ dimension-discarder \
 
 * `metadata` - allows comparisons on meta-data values and whether to keep or discard a record in case of a match
 * `metadata-from-name` - allows extraction of meta-data value from the image name via a regular expression
-* `split` - adds the field `split` to the meta-data of the record passing through, which can be acted on with other filters (or stored in the output)
+* `split-records` - adds the field `split` to the meta-data of the record passing through, which can be acted on with other filters (or stored in the output)
 
 
 ## Record management
@@ -63,6 +63,7 @@ dimension-discarder \
 A number of generic record management filters are available:
 
 * `check-duplicate-filenames` - when using multiple batches as input, duplicate file names can be an issue when creating a combined output
+* `discard-by-name` - discards images based on their name, either using explicit names or regular expressions
 * `discard-invalid-images` - attempts to load the image and discards them in case the loading fails (useful when data acquisition can generate invalid images)
 * `discard-negatives` - removes records from the stream that have no annotations
 * `max-records` - limits the number of records passing through
