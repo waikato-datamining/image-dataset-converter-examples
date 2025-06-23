@@ -34,7 +34,7 @@ There are different types of placeholders:
   These placeholders can be based on other placeholders. The reason for this
   plugin is that the output of filters like `meta-sub-images` don't have any
   directory associated with them anymore, only a file name. That renders all
-  the input-based placeholders unusable. Using `set-placeholders` beforehand
+  the input-based placeholders unusable. Using `set-placeholder` beforehand
   allows *saving* the input directory in another placeholder for later use.
   Meta-data can be used as placeholders as well using the `metadata-to-placeholder`
   plugin, which extracts a particular key from the metadata passing through
