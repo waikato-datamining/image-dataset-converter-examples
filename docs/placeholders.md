@@ -67,7 +67,7 @@ it can be tedious copying images around. Instead, if the model can communicate
 via Redis, the predictions can be placed in the same location as the input
 file even if the filter like `meta-sub-images` should invalidate the input-based
 placeholders like `{INPUT_PATH}`. The following command saves the current
-input directory in `{OUTPUT_DIR}`, which is then used to save the generated\
+input directory in `{OUTPUT_DIR}`, which is then used to save the generated
 prediction:
 
 ```bash
