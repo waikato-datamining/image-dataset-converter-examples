@@ -21,7 +21,8 @@ If the code below were available through module `my.code`, then the function spe
 
 ```python
 from typing import Iterable
-from idc.api import ImageClassificationData, make_list, flatten_list
+from kasperl.api import make_list, flatten_list
+from idc.api import ImageClassificationData
 
 # reader: generates image classification containers from the path   
 def pyfunc_reader(path: str) -> Iterable[ImageClassificationData]:
