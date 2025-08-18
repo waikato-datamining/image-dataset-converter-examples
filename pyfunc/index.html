@@ -659,7 +659,8 @@ custom Python functions:</p>
 <li>writer: <code>my.code:pyfunc_writer</code></li>
 </ul>
 <pre><code class="language-python">from typing import Iterable
-from idc.api import ImageClassificationData, make_list, flatten_list
+from kasperl.api import make_list, flatten_list
+from idc.api import ImageClassificationData
 
 # reader: generates image classification containers from the path   
 def pyfunc_reader(path: str) -&gt; Iterable[ImageClassificationData]:
