@@ -505,6 +505,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#plotting-visualdl-log-files" class="md-nav__link">
+    Plotting VisualDL log files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -703,6 +710,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#plotting-visualdl-log-files" class="md-nav__link">
+    Plotting VisualDL log files
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -780,6 +794,31 @@ back into sub-directory format:</p>
     -l INFO \
     -o ./indexed
 </code></pre>
+<h3 id="plotting-visualdl-log-files">Plotting VisualDL log files<a class="headerlink" href="#plotting-visualdl-log-files" title="Permanent link">#</a></h3>
+<p>When building, e.g., image segmentation models, Paddle can output the progress
+in <a href="https://github.com/PaddlePaddle/VisualDL">VisualDL</a> log files. Typically,
+these are visualized with the <code>visualdl</code> binary and viewed in the browser.
+When this is not an option, e.g., when in a headless environment on a server,
+then you can still generate simple text-based plots in the terminal via
+the <code>to-terminal-plot</code> writer of the <a href="https://github.com/waikato-datamining/kasperl-plots">kasperl-plots</a> 
+library.</p>
+<p>The example pipeline below monitors the <code>./logs/</code> directory  for any 
+modifications to <code>.log</code> files. It then reads the modified file using the 
+<code>from-visualdl</code> reader, generating a plot for the <code>Evaluate/mIoU</code> scalar
+and displays it using <code>to-terminal-plot</code>:</p>
+<pre><code class="language-bash">idc-convert \
+    watch-dir \
+      -i &quot;./logs/&quot; \
+      -e &quot;.log&quot; \
+      -E modified \
+      -a nothing \
+      -p never \
+      -b &quot;from-visualdl -l INFO -c scalar -t Evaluate/mIoU&quot; \
+    to-terminal-plot
+</code></pre>
+<p>Below is a screenshot with two terminal sessions, one training a PaddleSeg
+model, and the other one monitoring/plotting the log file of the training run: </p>
+<p><img alt="Example visualization of Paddle VisualDL log file using to-terminal-plot" src="../img/paddle-visualdl-watchdir.png" /></p>
 
 
 
