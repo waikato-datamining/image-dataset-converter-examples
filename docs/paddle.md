@@ -64,3 +64,35 @@ idc-convert -l INFO \
     -l INFO \
     -o ./indexed
 ```
+
+## Plotting VisualDL log files
+
+When building, e.g., image segmentation models, Paddle can output the progress
+in [VisualDL](https://github.com/PaddlePaddle/VisualDL) log files. Typically,
+these are visualized with the `visualdl` binary and viewed in the browser.
+When this is not an option, e.g., when in a headless environment on a server,
+then you can still generate simple text-based plots in the terminal via
+the `to-terminal-plot` writer of the [kasperl-plots](https://github.com/waikato-datamining/kasperl-plots) 
+library.
+
+The example pipeline below monitors the `./logs/` directory  for any 
+modifications to `.log` files. It then reads the modified file using the 
+`from-visualdl` reader, generating a plot for the `Evaluate/mIoU` scalar
+and displays it using `to-terminal-plot`:
+
+```bash
+idc-convert \
+    watch-dir \
+      -i "./logs/" \
+      -e ".log" \
+      -E modified \
+      -a nothing \
+      -p never \
+      -b "from-visualdl -l INFO -c scalar -t Evaluate/mIoU" \
+    to-terminal-plot
+```
+
+Below is a screenshot with two terminal sessions, one training a PaddleSeg
+model, and the other one monitoring/plotting the log file of the training run: 
+
+![Example visualization of Paddle VisualDL log file using to-terminal-plot](img/paddle-visualdl-watchdir.png)
