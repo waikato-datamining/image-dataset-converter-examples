@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://www.data-mining.co.nz/image-dataset-converter-examples/filters/">
+        <link rel="canonical" href="https://www.data-mining.co.nz/image-dataset-converter-examples/execution_control/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Filter usage - image-dataset-converter examples</title>
+        <title>Execution control - image-dataset-converter examples</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bounding-box-polygon" class="md-skip">
+        <a href="#sub-pipelines" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Filter usage
+              Execution control
             
           </span>
         </div>
@@ -292,83 +292,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Filter usage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../filters/" class="md-nav__link">
         Filter usage
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bounding-box-polygon" class="md-nav__link">
-    Bounding box / polygon
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#too-small-or-too-large" class="md-nav__link">
-    Too small or too large?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-conversion" class="md-nav__link">
-    Domain conversion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotation-management" class="md-nav__link">
-    Annotation management
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meta-data-management" class="md-nav__link">
-    Meta-data management
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#record-management" class="md-nav__link">
-    Record management
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -392,11 +320,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../execution_control/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Execution control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Execution control
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -753,43 +718,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bounding-box-polygon" class="md-nav__link">
-    Bounding box / polygon
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#too-small-or-too-large" class="md-nav__link">
-    Too small or too large?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-conversion" class="md-nav__link">
-    Domain conversion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotation-management" class="md-nav__link">
-    Annotation management
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meta-data-management" class="md-nav__link">
-    Meta-data management
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#record-management" class="md-nav__link">
-    Record management
+  <a href="#sub-pipelines" class="md-nav__link">
+    Sub-pipelines
   </a>
   
 </li>
@@ -808,78 +738,40 @@
                 
                   
 
-  <a href="https://github.com/waikato-datamining/image-dataset-converter-examples/edit/master/docs/filters.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/waikato-datamining/image-dataset-converter-examples/edit/master/docs/execution_control.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>Filter usage</h1>
+  <h1>Execution control</h1>
 
-<p>The following sections only show snippets of commands, as there are quite a number of filters available.</p>
-<h3 id="bounding-box-polygon">Bounding box / polygon<a class="headerlink" href="#bounding-box-polygon" title="Permanent link">#</a></h3>
-<p>With the <code>coerce-bbox</code> filter, you can force annotations to be bounding box only.
-The reverse is the <code>coerce-mask</code> filter, which ensures that all annotations are available as polygons.</p>
-<h3 id="too-small-or-too-large">Too small or too large?<a class="headerlink" href="#too-small-or-too-large" title="Permanent link">#</a></h3>
-<p>Using the <code>dimension-discarder</code> filter, you can filter out too large or too small images quite easily:</p>
+<p>The following filters can be used for controlling the execution of the
+pipeline:</p>
 <ul>
-<li>only allow within certain width/height constraint</li>
+<li><code>block</code> - blocks data passing through based on a condition applied to the meta-data</li>
+<li><code>list-to-sequence</code> - forwards the elements of lists individually</li>
+<li><code>stop</code> - stops the pipeline if the meta-data-based condition holds true</li>
+<li><code>sub-process</code> - meta-data condition determines execution of sub-filter(s)</li>
+<li><code>tee</code> - meta-data condition determines forking off of data to the sub-pipeline (filter(s), [writer])</li>
+<li><code>trigger</code> - meta-data condition determines execution of the sub-pipeline (reader, [filter(s)], [writer])</li>
 </ul>
-<pre><code class="language-bash">...
-dimension-discarder \
+<h2 id="sub-pipelines">Sub-pipelines<a class="headerlink" href="#sub-pipelines" title="Permanent link">#</a></h2>
+<p>With the <code>tee</code> meta-filter, it is possible to filter the images coming through with a separate
+sub-pipeline. That allows converting the incoming data into multiple output formats with
+their own preprocessing.</p>
+<p>The following command loads the VOC XML annotations and saves them in ADAMS and YOLO format
+in one command, but each scaled differently:</p>
+<pre><code class="language-bash">idc-convert \
   -l INFO \
-  --min_height 100 \
-  --max_height 200 \
-  --min_width 100 \
-  --max_width 200 \
-...
+  from-voc-od \
+    -l INFO \
+    -i &quot;./voc/*.xml&quot; \
+  tee \
+    -f &quot;scale -m replace -T 0 -f 0.5 -t 0.5 -u to-adams-od -o ./adams-tee/&quot; \
+  tee \
+    -f &quot;scale -m replace -T 0 -f 0.25 -t 0.25 -u to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt&quot;
 </code></pre>
-<ul>
-<li>only a certain area, but the shape is irrelevant</li>
-</ul>
-<pre><code class="language-bash">...
-dimension-discarder \
-  -l INFO \
-  --min_area 10000 \
-  --max_area 50000 \
-...
-</code></pre>
-<h3 id="domain-conversion">Domain conversion<a class="headerlink" href="#domain-conversion" title="Permanent link">#</a></h3>
-<ul>
-<li><em>object detection to image classification:</em> With the <code>od-to-ic</code> filter you can convert object detection 
-  annotations to image classification. How multiple differing labels are handled can be specified.</li>
-<li><em>object detection to image segmentation:</em> The <code>od-to-is</code> filter generates image segmentation data 
-  from the bbox/polygon annotations.</li>
-</ul>
-<h3 id="annotation-management">Annotation management<a class="headerlink" href="#annotation-management" title="Permanent link">#</a></h3>
-<ul>
-<li><code>filter-labels</code> - leaves only the matching labels in the annotations</li>
-<li><code>map-labels</code> - for renaming labels</li>
-<li><code>remove-classes</code> - removes the specified labels</li>
-<li><code>strip-annotations</code> - removes all annotations</li>
-<li><code>write-labels</code> - outputs a list of all the encountered labels</li>
-</ul>
-<h3 id="meta-data-management">Meta-data management<a class="headerlink" href="#meta-data-management" title="Permanent link">#</a></h3>
-<ul>
-<li><code>metadata</code> - allows comparisons on meta-data values and whether to keep or discard a record in case of a match</li>
-<li><code>metadata-from-name</code> - allows extraction of meta-data value from the image name via a regular expression</li>
-<li><code>metadata-to-placeholder</code> - sets the specified placeholder using the data from the meta-data passing through</li>
-<li><code>set-metadata</code> - sets the meta-data key/value pair as data passes through, can make use of data passing through as well </li>
-<li><code>split-records</code> - adds a field to the meta-data (default: <code>split</code>) of the record passing through, which can be acted on with other filters (or stored in the output)</li>
-</ul>
-<h3 id="record-management">Record management<a class="headerlink" href="#record-management" title="Permanent link">#</a></h3>
-<p>A number of generic record management filters are available:</p>
-<ul>
-<li><code>check-duplicate-filenames</code> - when using multiple batches as input, duplicate file names can be an issue when creating a combined output</li>
-<li><code>discard-by-name</code> - discards images based on their name, either using explicit names or regular expressions</li>
-<li><code>discard-invalid-images</code> - attempts to load the image and discards them in case the loading fails (useful when data acquisition can generate invalid images)</li>
-<li><code>discard-negatives</code> - removes records from the stream that have no annotations</li>
-<li><code>max-records</code> - limits the number of records passing through</li>
-<li><code>randomize-records</code> - when processing batches, this filter can randomize them (seeded or unseeded)</li>
-<li><code>record-window</code> - only lets a certain window of records pass through (e.g., the first 1000)</li>
-<li><code>rename</code> - allows renaming of images, e.g., prefixing them with a batch number/ID</li>
-<li><code>sample</code> - for selecting a random sub-sample from the stream</li>
-</ul>
 
 
 
@@ -900,7 +792,7 @@ dimension-discarder \
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../image_segmentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Image segmentation" rel="prev">
+        <a href="../placeholders/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Placeholders" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -909,20 +801,20 @@ dimension-discarder \
               <span class="md-footer__direction">
                 Previous
               </span>
-              Image segmentation
+              Placeholders
             </div>
           </div>
         </a>
       
       
         
-        <a href="../placeholders/" class="md-footer__link md-footer__link--next" aria-label="Next: Placeholders" rel="next">
+        <a href="../pyfunc/" class="md-footer__link md-footer__link--next" aria-label="Next: External functions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Placeholders
+              External functions
             </div>
           </div>
           <div class="md-footer__button md-icon">
