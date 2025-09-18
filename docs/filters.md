@@ -53,6 +53,7 @@ dimension-discarder \
 
 ## Meta-data management
 
+* `dims-to-metadata` - transfers the width and height of an image into its meta-data for conditional evaluations
 * `metadata` - allows comparisons on meta-data values and whether to keep or discard a record in case of a match
 * `metadata-from-name` - allows extraction of meta-data value from the image name via a regular expression
 * `metadata-to-placeholder` - sets the specified placeholder using the data from the meta-data passing through
