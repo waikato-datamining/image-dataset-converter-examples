@@ -97,3 +97,10 @@ Below is a screenshot with two terminal sessions, one training a PaddleSeg
 model, and the other one monitoring/plotting the log file of the training run: 
 
 ![Example visualization of Paddle VisualDL log file using to-terminal-plot](img/paddle-visualdl-watchdir.png)
+
+If you have a terminal that supports [sixel](https://en.wikipedia.org/wiki/Sixel)
+(check [www.arewesixelyet.com](https://www.arewesixelyet.com/) for compatibility),
+like KDE's [Konsole](https://konsole.kde.org/), then you can use the `to-sixel-plot` 
+writer to generate nice-looking graphs like this one:
+
+![Example visualization of Paddle VisualDL log file using to-sixel-plot](img/paddle-visualdl-sixel.png)
