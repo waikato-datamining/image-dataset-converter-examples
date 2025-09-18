@@ -861,7 +861,8 @@ library.</p>
 <p>The example pipeline below monitors the <code>./logs/</code> directory  for any 
 modifications to <code>.log</code> files. It then reads the modified file using the 
 <code>from-visualdl</code> reader, generating a plot for the <code>Evaluate/mIoU</code> scalar
-and displays it using <code>to-terminal-plot</code>:</p>
+(use the <code>idc-visualdl-info</code> tool to inspect VisualDL log files) and 
+displays it using <code>to-terminal-plot</code>:</p>
 <pre><code class="language-bash">idc-convert \
     watch-dir \
       -i &quot;./logs/&quot; \
