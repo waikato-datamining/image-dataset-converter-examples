@@ -20,9 +20,13 @@ nav:
         - Image segmentation: image_segmentation.md
         - Filter usage: filters.md
         - Placeholders: placeholders.md
-        - Docker usage: docker.md
+        - Execution control: execution_control.md
         - External functions: pyfunc.md
         - Multiple I/O: multi.md
+        - Email: email.md
+        - File handling: file_handling.md
+        - Temporary storage: storage.md
+        - Docker usage: docker.md
     - Additional libraries:
         - Image augmentation: imgaug.md
         - Image statistics: imgstats.md
