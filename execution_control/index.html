@@ -358,6 +358,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conditional-filtering" class="md-nav__link">
+    Conditional filtering
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -724,6 +731,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conditional-filtering" class="md-nav__link">
+    Conditional filtering
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -771,6 +785,33 @@ in one command, but each scaled differently:</p>
     -f &quot;scale -m replace -T 0 -f 0.5 -t 0.5 -u to-adams-od -o ./adams-tee/&quot; \
   tee \
     -f &quot;scale -m replace -T 0 -f 0.25 -t 0.25 -u to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt&quot;
+</code></pre>
+<h2 id="conditional-filtering">Conditional filtering<a class="headerlink" href="#conditional-filtering" title="Permanent link">#</a></h2>
+<p>Filtering based on meta-data is a very useful when dealing with heterogeneous 
+datasets. The following pipeline fragment splits images into smaller images
+only if certain conditions are met: if the image is wider than 600 pixels, then
+split it into two columns; if taller than 600 pixels, then split it into
+two rows.</p>
+<p>The <code>dims-to-metadata</code> filter transfers the width/height of the current image
+into its meta-data. The two <code>sub-process</code> meta-filters then execute their
+sub-pipelines only if the condition evaluates to <code>True</code>. The sub-pipelines
+have their own <code>dims-to-metadata</code> filter to update the meta-data with the
+new dimensions of the images.</p>
+<pre><code class="language-bash">...
+dims-to-metadata \
+sub-process \
+  -l INFO \
+  --field width \
+  --comparison gt \
+  --value 600 \
+  -f &quot;sub-images --num_cols 2 --num_rows 1 --suffix=-y={Y},x={X},w={W},h={H} --suppress_empty dims-to-metadata&quot; \
+sub-process \
+  -l INFO \
+  --field height \
+  --comparison gt \
+  --value 600 \
+  -f &quot;sub-images --num_cols 1 --num_rows 2 --suffix=-y={Y},x={X},w={W},h={H} --suppress_empty dims-to-metadata&quot; \
+...
 </code></pre>
 
 
