@@ -29,3 +29,37 @@ idc-convert \
   tee \
     -f "scale -m replace -T 0 -f 0.25 -t 0.25 -u to-yolo-od -o ./yolo-tee/ --labels ./yolo-tee/labels.txt"
 ```
+
+
+# Conditional filtering
+
+Filtering based on meta-data is a very useful when dealing with heterogeneous 
+datasets. The following pipeline fragment splits images into smaller images
+only if certain conditions are met: if the image is wider than 600 pixels, then
+split it into two columns; if taller than 600 pixels, then split it into
+two rows.
+
+The `dims-to-metadata` filter transfers the width/height of the current image
+into its meta-data. The two `sub-process` meta-filters then execute their
+sub-pipelines only if the condition evaluates to `True`. The sub-pipelines
+have their own `dims-to-metadata` filter to update the meta-data with the
+new dimensions of the images.
+
+
+```bash
+...
+dims-to-metadata \
+sub-process \
+  -l INFO \
+  --field width \
+  --comparison gt \
+  --value 600 \
+  -f "sub-images --num_cols 2 --num_rows 1 --suffix=-y={Y},x={X},w={W},h={H} --suppress_empty dims-to-metadata" \
+sub-process \
+  -l INFO \
+  --field height \
+  --comparison gt \
+  --value 600 \
+  -f "sub-images --num_cols 1 --num_rows 2 --suffix=-y={Y},x={X},w={W},h={H} --suppress_empty dims-to-metadata" \
+...
+```
