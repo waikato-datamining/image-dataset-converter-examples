@@ -15,4 +15,5 @@
 
 # Others
 
+* `delete-files` - deletes the incoming files
 * `move-files` - moves the incoming files into the specified target directory
