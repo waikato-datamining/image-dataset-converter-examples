@@ -78,7 +78,8 @@ library.
 The example pipeline below monitors the `./logs/` directory  for any 
 modifications to `.log` files. It then reads the modified file using the 
 `from-visualdl` reader, generating a plot for the `Evaluate/mIoU` scalar
-and displays it using `to-terminal-plot`:
+(use the `idc-visualdl-info` tool to inspect VisualDL log files) and 
+displays it using `to-terminal-plot`:
 
 ```bash
 idc-convert \
