@@ -701,9 +701,15 @@
 from temporary storage (i.e., a dictionary) that is available through the session 
 object of the pipeline:</p>
 <ul>
+<li><code>delete-storage</code> - filter that removes the name storage item</li>
 <li><code>from-storage</code> - reader retrieves the named storage item</li>
 <li><code>set-storage</code> - filter that updates the storage with the data passing through</li>
 <li><code>to-storage</code> - writer that updates the storage with the data arriving</li>
+</ul>
+<p>For annotations, you can use these specialized filters:</p>
+<ul>
+<li><code>annotations-from-storage</code> - replaces the annotations of the current container with the ones from storage</li>
+<li><code>annotations-to-storage</code> - pushes the annotations of the current container into internal storage</li>
 </ul>
 
 
