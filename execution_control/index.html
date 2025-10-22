@@ -365,6 +365,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sub-pipeline-file-format" class="md-nav__link">
+    Sub-pipeline file format
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -738,6 +745,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sub-pipeline-file-format" class="md-nav__link">
+    Sub-pipeline file format
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -813,6 +827,23 @@ sub-process \
   -f &quot;sub-images --num_cols 1 --num_rows 2 --suffix=-y={Y},x={X},w={W},h={H} --suppress_empty dims-to-metadata&quot; \
 ...
 </code></pre>
+<h2 id="sub-pipeline-file-format">Sub-pipeline file format<a class="headerlink" href="#sub-pipeline-file-format" title="Permanent link">#</a></h2>
+<p><code>sub-process</code>, <code>tee</code> and <code>trigger</code> define their sub-flow either explicitly
+as a single command-line or point to a file with the sequence of plugins. The
+former should be used for simple sub-flows, whereas the latter makes it easier
+to develop more complex ones.</p>
+<p>The file format is quite simple:</p>
+<ul>
+<li>plain text with extension of your choice</li>
+<li>line comments start with <code>#</code></li>
+<li>blank lines get ignored</li>
+<li>no line continuation, like <code>\</code> or <code>^</code>, is required</li>
+</ul>
+<p>After stripping the file of blank and comment lines (white spaces at start/end 
+of lines get removed as well), all the plugins and their arguments get 
+concatenated using spaces. The single command-line is then parsed.</p>
+<p>Of course, further sub-pipelines can be defined in such a file. There is no
+limit to nesting, as they get expanded/processed as they are encountered.</p>
 
 
 
