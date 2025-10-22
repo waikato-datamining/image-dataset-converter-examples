@@ -899,8 +899,9 @@ to generate regions for a set number of rows/columns or fixed row heights/column
 will suppress images that have no annotations in them.</p>
 <p>Using the <code>meta-sub-images</code> filter, you can feed the small images that were generated
 through the specified base filter. The output of this filter gets reassembled and forwarded. 
-This base filter can be a simple filter or a more complex pipeline, which passes the 
-images through a <a href="../object_detection_in_videos/">model via a Redis backend</a>, for instance.</p>
+This base filter can be a simple filter or a more complex pipeline (either explicitly 
+defined or stored in a file), which passes the images through a 
+<a href="../object_detection_in_videos/">model via a Redis backend</a>, for instance.</p>
 
 
 
