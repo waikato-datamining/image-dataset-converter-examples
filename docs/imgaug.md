@@ -111,5 +111,6 @@ will suppress images that have no annotations in them.
 
 Using the `meta-sub-images` filter, you can feed the small images that were generated
 through the specified base filter. The output of this filter gets reassembled and forwarded. 
-This base filter can be a simple filter or a more complex pipeline, which passes the 
-images through a [model via a Redis backend](object_detection_in_videos.md), for instance.
+This base filter can be a simple filter or a more complex pipeline (either explicitly 
+defined or stored in a file), which passes the images through a 
+[model via a Redis backend](object_detection_in_videos.md), for instance.
