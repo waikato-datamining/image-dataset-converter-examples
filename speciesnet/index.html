@@ -12,8 +12,16 @@
       
         <link rel="canonical" href="https://www.data-mining.co.nz/image-dataset-converter-examples/speciesnet/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      
+        <link rel="prev" href="../object_detection_in_videos/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -21,15 +29,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -41,24 +48,17 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,16 +78,18 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="image-dataset-converter examples" class="md-header__button md-logo" aria-label="image-dataset-converter examples" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -107,46 +109,56 @@
     </div>
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/waikato-datamining/image-dataset-converter-examples" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -176,12 +188,12 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="image-dataset-converter examples" class="md-nav__button md-logo" aria-label="image-dataset-converter examples" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../logo.png" alt="logo">
 
     </a>
     image-dataset-converter examples
@@ -191,7 +203,7 @@
       <a href="https://github.com/waikato-datamining/image-dataset-converter-examples" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -203,14 +215,26 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -218,444 +242,852 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Core library
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Core library" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Core library
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../image_classification/" class="md-nav__link">
-        Image classification
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image classification
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../object_detection/" class="md-nav__link">
-        Object detection
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object detection
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../image_segmentation/" class="md-nav__link">
-        Image segmentation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image segmentation
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../filters/" class="md-nav__link">
-        Filter usage
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filter usage
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../placeholders/" class="md-nav__link">
-        Placeholders
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../execution_control/" class="md-nav__link">
-        Execution control
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execution control
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pyfunc/" class="md-nav__link">
-        External functions
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External functions
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../multi/" class="md-nav__link">
-        Multiple I/O
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple I/O
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../email/" class="md-nav__link">
-        Email
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../file_handling/" class="md-nav__link">
-        File handling
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File handling
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../storage/" class="md-nav__link">
-        Temporary storage
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temporary storage
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
-        Docker usage
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker usage
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Additional libraries
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Additional libraries" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Additional libraries
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional libraries
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional libraries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../imgaug/" class="md-nav__link">
-        Image augmentation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image augmentation
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../imgstats/" class="md-nav__link">
-        Image statistics
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image statistics
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../imgvis/" class="md-nav__link">
-        Image visualizations
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image visualizations
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../labelme/" class="md-nav__link">
-        labelme
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    labelme
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../paddle/" class="md-nav__link">
-        Paddle
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paddle
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pdf/" class="md-nav__link">
-        PDF
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../plantcv/" class="md-nav__link">
-        PlantCV
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlantCV
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../redis/" class="md-nav__link">
-        Redis
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../video/" class="md-nav__link">
-        Video
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Practical examples
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Practical examples" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Practical examples
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practical examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../depth_estimation_in_videos/" class="md-nav__link">
-        Depth estimation
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Depth estimation
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../object_detection_in_videos/" class="md-nav__link">
-        Object detection
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object detection
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          SpeciesNet
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SpeciesNet
+  
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        SpeciesNet
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SpeciesNet
+  
+
+    
+  </span>
+  
+  
+
       </a>
       
         
@@ -673,21 +1105,33 @@
       
         <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
-    Requirements
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#speciesnet-model" class="md-nav__link">
-    SpeciesNet model
+    <span class="md-ellipsis">
+      
+        SpeciesNet model
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#processing-single-video-file" class="md-nav__link">
-    Processing single video file
+    <span class="md-ellipsis">
+      
+        Processing single video file
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Processing single video file">
@@ -695,14 +1139,22 @@
         
           <li class="md-nav__item">
   <a href="#determine-changes-between-frames" class="md-nav__link">
-    Determine changes between frames
+    <span class="md-ellipsis">
+      
+        Determine changes between frames
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#extracting-frames" class="md-nav__link">
-    Extracting frames
+    <span class="md-ellipsis">
+      
+        Extracting frames
+      
+    </span>
   </a>
   
 </li>
@@ -714,21 +1166,33 @@
       
         <li class="md-nav__item">
   <a href="#processing-multiple-video-files" class="md-nav__link">
-    Processing multiple video files
+    <span class="md-ellipsis">
+      
+        Processing multiple video files
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#visualizing-the-predictions" class="md-nav__link">
-    Visualizing the predictions
+    <span class="md-ellipsis">
+      
+        Visualizing the predictions
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#redirecting-frames-based-on-detected-labels" class="md-nav__link">
-    Redirecting frames based on detected labels
+    <span class="md-ellipsis">
+      
+        Redirecting frames based on detected labels
+      
+    </span>
   </a>
   
 </li>
@@ -740,10 +1204,11 @@
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -774,21 +1239,33 @@
       
         <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
-    Requirements
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#speciesnet-model" class="md-nav__link">
-    SpeciesNet model
+    <span class="md-ellipsis">
+      
+        SpeciesNet model
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#processing-single-video-file" class="md-nav__link">
-    Processing single video file
+    <span class="md-ellipsis">
+      
+        Processing single video file
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Processing single video file">
@@ -796,14 +1273,22 @@
         
           <li class="md-nav__item">
   <a href="#determine-changes-between-frames" class="md-nav__link">
-    Determine changes between frames
+    <span class="md-ellipsis">
+      
+        Determine changes between frames
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#extracting-frames" class="md-nav__link">
-    Extracting frames
+    <span class="md-ellipsis">
+      
+        Extracting frames
+      
+    </span>
   </a>
   
 </li>
@@ -815,21 +1300,33 @@
       
         <li class="md-nav__item">
   <a href="#processing-multiple-video-files" class="md-nav__link">
-    Processing multiple video files
+    <span class="md-ellipsis">
+      
+        Processing multiple video files
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#visualizing-the-predictions" class="md-nav__link">
-    Visualizing the predictions
+    <span class="md-ellipsis">
+      
+        Visualizing the predictions
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#redirecting-frames-based-on-detected-labels" class="md-nav__link">
-    Redirecting frames based on detected labels
+    <span class="md-ellipsis">
+      
+        Redirecting frames based on detected labels
+      
+    </span>
   </a>
   
 </li>
@@ -844,14 +1341,14 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
-  <a href="https://github.com/waikato-datamining/image-dataset-converter-examples/edit/master/docs/speciesnet.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+
+  
+  
 
 
   <h1>SpeciesNet</h1>
@@ -866,13 +1363,13 @@ store the frames with detections for further use.</p>
 <li><a href="https://github.com/waikato-datamining/image-dataset-converter-video">image-dataset-converter-video</a></li>
 </ul>
 <p>Or simply install <code>image-dataset-converter-all&gt;=0.0.8</code>:</p>
-<pre><code class="language-bash">pip install &quot;image-dataset-converter-all&gt;=0.0.8&quot;
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;image-dataset-converter-all&gt;=0.0.8&quot;</span>
+</span></code></pre></div>
 <p>Since we are using <a href="https://redis.io/">Redis</a> as a backend for exchanging
 images and predictions, you either have to have it installed on your system
 or you can run it in a Docker container as follows:</p>
-<pre><code class="language-bash">docker run --net=host --name redis-server -d redis
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--net<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span>redis-server<span class="w"> </span>-d<span class="w"> </span>redis
+</span></code></pre></div>
 <p>Either one of the SpeciesNet Docker images:</p>
 <ul>
 <li><a href="https://github.com/waikato-datamining/speciesnet/tree/main/4.0.1_cuda12.1">CUDA</a></li>
@@ -881,16 +1378,16 @@ or you can run it in a Docker container as follows:</p>
 <p><strong>NB:</strong> If you haven't used Docker before, then have a look at 
 <a href="https://www.data-mining.co.nz/docker-for-data-scientists/">this tutorial</a>.</p>
 <p>The following directory structure below your current directory:</p>
-<pre><code>  .
-  |
-  +- cache
-  |
-  +- config
-  |
-  +- input
-  |
-  +- output 
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  .
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  |
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  +- cache
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  |
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  +- config
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  |
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  +- input
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  |
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  +- output 
+</span></code></pre></div>
 <p>With <code>input</code> containing one or more video files in AVI format,
 and <code>output</code> for storing the predictions in <a href="https://github.com/waikato-datamining/fast-opex">OPEX format</a>.</p>
 <p><strong>NB:</strong> MP4 files can be processed as well. </p>
@@ -899,33 +1396,33 @@ and <code>output</code> for storing the predictions in <a href="https://github.c
 <ul>
 <li>CUDA</li>
 </ul>
-<pre><code class="language-bash">docker run --rm --gpus=all --shm-size 8G --net=host \
-  -u $(id -u):$(id -g) -e USER=$USER \
-  -v `pwd`:/workspace \
-  -v `pwd`/cache:/.cache \
-  -v `pwd`/config:/.config \
-  -v `pwd`/cache:/.torch \
-  -it waikatodatamining/speciesnet:4.0.1_cuda12.1
-  speciesnet_predict_redis \
-    --redis_in images \
-    --redis_out predictions \
-    --verbose
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--gpus<span class="o">=</span>all<span class="w"> </span>--shm-size<span class="w"> </span>8G<span class="w"> </span>--net<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>-u<span class="w"> </span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">USER</span><span class="o">=</span><span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/workspace<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/cache:/.cache<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/config:/.config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/cache:/.torch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span>-it<span class="w"> </span>waikatodatamining/speciesnet:4.0.1_cuda12.1
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span>speciesnet_predict_redis<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span>--redis_in<span class="w"> </span>images<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span>--redis_out<span class="w"> </span>predictions<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span>--verbose
+</span></code></pre></div>
 <ul>
 <li>CPU</li>
 </ul>
-<pre><code class="language-bash">docker run --rm --shm-size 8G --net=host \
-  -u $(id -u):$(id -g) -e USER=$USER \
-  -v `pwd`:/workspace \
-  -v `pwd`/cache:/.cache \
-  -v `pwd`/config:/.config \
-  -v `pwd`/cache:/.torch \
-  -it waikatodatamining/speciesnet:4.0.1_cpu \
-  speciesnet_predict_redis \
-    --redis_in images \
-    --redis_out predictions \
-    --verbose
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--shm-size<span class="w"> </span>8G<span class="w"> </span>--net<span class="o">=</span>host<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>-u<span class="w"> </span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>:<span class="k">$(</span>id<span class="w"> </span>-g<span class="k">)</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">USER</span><span class="o">=</span><span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/workspace<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/cache:/.cache<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/config:/.config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/cache:/.torch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span>-it<span class="w"> </span>waikatodatamining/speciesnet:4.0.1_cpu<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span>speciesnet_predict_redis<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span>--redis_in<span class="w"> </span>images<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span>--redis_out<span class="w"> </span>predictions<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span>--verbose
+</span></code></pre></div>
 <h2 id="processing-single-video-file">Processing single video file<a class="headerlink" href="#processing-single-video-file" title="Permanent link">#</a></h2>
 <h3 id="determine-changes-between-frames">Determine changes between frames<a class="headerlink" href="#determine-changes-between-frames" title="Permanent link">#</a></h3>
 <p>If you want to skip similar frames, e.g., leaves moving in the wind, it pays 
@@ -935,36 +1432,36 @@ process all frames to avoid missing these.</p>
 <p>The following command processes the file <code>VID0003.AVI</code> and calculates the
 changes between frames as a ratio (0-1) with a minimum change of <code>0.000001</code>
 required:</p>
-<pre><code class="language-bash">idc-convert -l INFO \
-   from-video-file \
-     -l INFO \
-     -i &quot;./input/VID0003.AVI&quot; \
-     -t od \
-   calc-frame-changes \
-     -t 0.000001
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>idc-convert<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">   </span>from-video-file<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">     </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">     </span>-i<span class="w"> </span><span class="s2">&quot;./input/VID0003.AVI&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">     </span>-t<span class="w"> </span>od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">   </span>calc-frame-changes<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">     </span>-t<span class="w"> </span><span class="m">0</span>.000001
+</span></code></pre></div>
 <p>This will output a histogram similar to this:</p>
-<pre><code>+1.09e-06 - +3.22e-06  [57]  ████████████████████████████████████████
-+3.22e-06 - +5.35e-06  [29]  ████████████████████▍
-+5.35e-06 - +7.49e-06  [13]  █████████▏
-+7.49e-06 - +9.62e-06  [14]  █████████▉
-+9.62e-06 - +1.18e-05  [15]  ██████████▌
-+1.18e-05 - +1.39e-05  [10]  ███████
-+1.39e-05 - +1.60e-05  [11]  ███████▊
-+1.60e-05 - +1.82e-05  [ 7]  ████▉
-+1.82e-05 - +2.03e-05  [ 3]  ██▏
-+2.03e-05 - +2.24e-05  [ 2]  █▍
-+2.24e-05 - +2.46e-05  [ 2]  █▍
-+2.46e-05 - +2.67e-05  [ 2]  █▍
-+2.67e-05 - +2.88e-05  [ 1]  ▊
-+2.88e-05 - +3.10e-05  [ 1]  ▊
-+3.10e-05 - +3.31e-05  [ 5]  ███▌
-+3.31e-05 - +3.52e-05  [ 0]
-+3.52e-05 - +3.74e-05  [ 0]
-+3.74e-05 - +3.95e-05  [ 0]
-+3.95e-05 - +4.16e-05  [ 2]  █▍
-+4.16e-05 - +4.38e-05  [ 1]  ▊
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>+1.09e-06 - +3.22e-06  [57]  ████████████████████████████████████████
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>+3.22e-06 - +5.35e-06  [29]  ████████████████████▍
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>+5.35e-06 - +7.49e-06  [13]  █████████▏
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>+7.49e-06 - +9.62e-06  [14]  █████████▉
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>+9.62e-06 - +1.18e-05  [15]  ██████████▌
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>+1.18e-05 - +1.39e-05  [10]  ███████
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>+1.39e-05 - +1.60e-05  [11]  ███████▊
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>+1.60e-05 - +1.82e-05  [ 7]  ████▉
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>+1.82e-05 - +2.03e-05  [ 3]  ██▏
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>+2.03e-05 - +2.24e-05  [ 2]  █▍
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>+2.24e-05 - +2.46e-05  [ 2]  █▍
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>+2.46e-05 - +2.67e-05  [ 2]  █▍
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>+2.67e-05 - +2.88e-05  [ 1]  ▊
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>+2.88e-05 - +3.10e-05  [ 1]  ▊
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>+3.10e-05 - +3.31e-05  [ 5]  ███▌
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>+3.31e-05 - +3.52e-05  [ 0]
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>+3.52e-05 - +3.74e-05  [ 0]
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>+3.74e-05 - +3.95e-05  [ 0]
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>+3.95e-05 - +4.16e-05  [ 2]  █▍
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>+4.16e-05 - +4.38e-05  [ 1]  ▊
+</span></code></pre></div>
 <p>Using the threshold <code>5.35e-06</code>, you will skip frames that would fall into the 
 top two bins of the above histogram.</p>
 <h3 id="extracting-frames">Extracting frames<a class="headerlink" href="#extracting-frames" title="Permanent link">#</a></h3>
@@ -977,31 +1474,31 @@ lower than 0.8 (<code>metadata-od</code>), discards any results from the model
 with no predictions (<code>discard-negatives</code>) 
 and stores any images with predictions in the <code>output</code> directory in 
 <a href="https://github.com/waikato-datamining/fast-opex">OPEX format</a>:</p>
-<pre><code class="language-bash">idc-convert -l INFO \
-  from-video-file \
-    -l INFO \
-    -i &quot;./input/VID0003.AVI&quot; \
-    -t od \
-  skip-similar-frames \
-    -l INFO \
-    -t 5.35e-06 \
-  redis-predict-od \
-    -l INFO \
-    -o images \
-    -i predictions \
-    -t 10 \
-  metadata-od \
-    -l INFO \
-    -f score \
-    -c gt \
-    -v 0.8 \
-    -a keep \
-  discard-negatives \
-    -l INFO \
-  to-opex-od \
-    -l INFO \
-    -o ./output
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>idc-convert<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>from-video-file<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>-i<span class="w"> </span><span class="s2">&quot;./input/VID0003.AVI&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>-t<span class="w"> </span>od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span>skip-similar-frames<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span>-t<span class="w"> </span><span class="m">5</span>.35e-06<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span>redis-predict-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span>-o<span class="w"> </span>images<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span>-i<span class="w"> </span>predictions<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span>-t<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">  </span>metadata-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span>-f<span class="w"> </span>score<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span>-c<span class="w"> </span>gt<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span>-v<span class="w"> </span><span class="m">0</span>.8<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span>-a<span class="w"> </span>keep<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span>discard-negatives<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span>to-opex-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span>-o<span class="w"> </span>./output
+</span></code></pre></div>
 <h2 id="processing-multiple-video-files">Processing multiple video files<a class="headerlink" href="#processing-multiple-video-files" title="Permanent link">#</a></h2>
 <p>The <code>from-video-file</code> reader is not limited to just processing a single file,
 e.g., you can supply multiple file names to the <code>-i</code> option or use a <em>glob</em> 
@@ -1012,43 +1509,43 @@ regardless of the frame-rate of the video or <code>-f/--fps_factor</code> which 
 the actual nth frame to return based on the frame-rate of the video multiplied by
 this factor. The command below processes all <code>.AVI</code> files from the <code>input</code>
 directory and retrieves one frame for every second of video footage (<code>-f 1</code>):</p>
-<pre><code class="language-bash">idc-convert -l INFO \
-  from-video-file \
-    -l INFO \
-    -i &quot;./input/*.AVI&quot; \
-    -f 1 \
-    -t od \
-  redis-predict-od \
-    -l INFO \
-    -o images \
-    -i predictions \
-    -t 10 \
-  metadata-od \
-    -l INFO \
-    -f score \
-    -c gt \
-    -v 0.8 \
-    -a keep \
-  discard-negatives \
-    -l INFO \
-  to-opex-od \
-    -l INFO \
-    -o ./output
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>idc-convert<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>from-video-file<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>-i<span class="w"> </span><span class="s2">&quot;./input/*.AVI&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span>-t<span class="w"> </span>od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span>redis-predict-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span>-o<span class="w"> </span>images<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span>-i<span class="w"> </span>predictions<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span>-t<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span>metadata-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span>-f<span class="w"> </span>score<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span>-c<span class="w"> </span>gt<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span>-v<span class="w"> </span><span class="m">0</span>.8<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span>-a<span class="w"> </span>keep<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span>discard-negatives<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">  </span>to-opex-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span>-o<span class="w"> </span>./output
+</span></code></pre></div>
 <h2 id="visualizing-the-predictions">Visualizing the predictions<a class="headerlink" href="#visualizing-the-predictions" title="Permanent link">#</a></h2>
 <p>If you want to quickly generate some composite images, you can use the 
 following command. It will create a new directory <code>overlays</code> in which
 it will save the generated images.</p>
-<pre><code class="language-bash">idc-convert -l INFO \
-  from-opex-od \
-    -l INFO \
-    -i &quot;./output/*.json&quot; \
-  add-annotation-overlay-od \
-    -l INFO \
-  to-data \
-    -l INFO \
-    -o ./overlays
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>idc-convert<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>from-opex-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>-i<span class="w"> </span><span class="s2">&quot;./output/*.json&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span>add-annotation-overlay-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span>to-data<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span>-o<span class="w"> </span>./overlays
+</span></code></pre></div>
 <h2 id="redirecting-frames-based-on-detected-labels">Redirecting frames based on detected labels<a class="headerlink" href="#redirecting-frames-based-on-detected-labels" title="Permanent link">#</a></h2>
 <p>When identifying species in a frame, it can be helpful automatically sorting the
 frames into sub-directories based on the labels that were identified within 
@@ -1060,28 +1557,35 @@ can be none, one or many in case of object detection. Second, the metadata value
 needs to be turned into a placeholder using the <code>metadata-to-placeholder</code> plugin.</p>
 <p>Therefore, we can change the output part of the <a href="#extracting-frames">Extracting frames</a> 
 pipeline from:</p>
-<pre><code class="language-bash">  ...
-  discard-negatives \
-    -l INFO \
-  to-opex-od \
-    -l INFO \
-    -o ./output
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">  </span>...
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span>discard-negatives<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span>to-opex-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span>-o<span class="w"> </span>./output
+</span></code></pre></div>
 <p>To this:</p>
-<pre><code class="language-bash">  ...
-  discard-negatives \
-    -l INFO \
-  label-to-metadata \
-    -l INFO \
-    -k type \
-  metadata-to-placeholder \
-    -l INFO \
-    -k type \
-    -p TYPE \    
-  to-opex-od \
-    -l INFO \
-    -o ./output/{TYPE}
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">  </span>...
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span>discard-negatives<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span>label-to-metadata<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span>-k<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span>metadata-to-placeholder<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span>-k<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span>-p<span class="w"> </span>TYPE<span class="w"> </span><span class="se">\ </span><span class="w">   </span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span>to-opex-od<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span>-o<span class="w"> </span>./output/<span class="o">{</span>TYPE<span class="o">}</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
 
 
 
@@ -1092,32 +1596,12 @@ pipeline from:</p>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../object_detection_in_videos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Object detection" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Object detection
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1140,10 +1624,14 @@ pipeline from:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
