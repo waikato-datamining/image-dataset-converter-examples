@@ -18,7 +18,7 @@ On this website you can find examples and documentation for:
 * [Object detection](object_detection.md)
 * [Image segmentation](image_segmentation.md)
 * [Filter usage](filters.md)
-* [Placeholders](placeholders.md)
+* [Variables](variables.md)
 * [Execution control](execution_control.md)
 * [External functions](pyfunc.md)
 * [Multiple I/O](multi.md)

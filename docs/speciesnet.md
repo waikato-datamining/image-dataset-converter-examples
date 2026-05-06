@@ -239,12 +239,12 @@ idc-convert -l INFO \
 
 When identifying species in a frame, it can be helpful automatically sorting the
 frames into sub-directories based on the labels that were identified within 
-the frame. This can be done by utilizing the [placeholder functionality](placeholders.md).
+the frame. This can be done by utilizing the [variable functionality](variables.md).
 For this to work, we need to employ two plugins: first, the label needs to be transferred
 into the metadata of the data container using the `label-to-metadata` plugin. This
 plugin outputs a container for as many labels there are in the data container, which
 can be none, one or many in case of object detection. Second, the metadata value
-needs to be turned into a placeholder using the `metadata-to-placeholder` plugin.
+needs to be turned into a variable using the `metadata-to-variable` plugin.
 
 Therefore, we can change the output part of the [Extracting frames](#extracting-frames) 
 pipeline from:
@@ -267,7 +267,7 @@ To this:
   label-to-metadata \
     -l INFO \
     -k type \
-  metadata-to-placeholder \
+  metadata-to-variable \
     -l INFO \
     -k type \
     -p TYPE \    

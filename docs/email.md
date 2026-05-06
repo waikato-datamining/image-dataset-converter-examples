@@ -1,8 +1,8 @@
 Whilst most readers and writers are file-based, it is also possible to
 retrieve and send emails using the following:
 
-* `get-email` - retrieve emails from an IMAP folder, FROM and SUBJECT can be stored in placeholders
-* `send-email` - send emails via SMTP, the from/to/subject/body options automatically expand placeholders
+* `get-email` - retrieve emails from an IMAP folder, FROM and SUBJECT can be stored in variables
+* `send-email` - send emails via SMTP, the from/to/subject/body options automatically expand variables
 
 The connection parameters are obtained through environment variables that are stored
 in [.env](https://github.com/theskumar/python-dotenv) files.
@@ -22,8 +22,8 @@ idc-convert -l INFO \
     -w 5 \
     --only_unseen \
     --mark_as_read \
-    --from_placeholder FROM \
-    --subject_placeholder SUBJECT \
+    --from_variable FROM \
+    --subject_variable SUBJECT \
   send-email \
     -l INFO \
     -f from@example.com \
