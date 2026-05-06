@@ -406,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../placeholders/" class="md-nav__link">
+      <a href="../placeholders.md" class="md-nav__link">
         
   
   
@@ -1549,12 +1549,12 @@ it will save the generated images.</p>
 <h2 id="redirecting-frames-based-on-detected-labels">Redirecting frames based on detected labels<a class="headerlink" href="#redirecting-frames-based-on-detected-labels" title="Permanent link">#</a></h2>
 <p>When identifying species in a frame, it can be helpful automatically sorting the
 frames into sub-directories based on the labels that were identified within 
-the frame. This can be done by utilizing the <a href="../placeholders/">placeholder functionality</a>.
+the frame. This can be done by utilizing the <a href="../variables/">variable functionality</a>.
 For this to work, we need to employ two plugins: first, the label needs to be transferred
 into the metadata of the data container using the <code>label-to-metadata</code> plugin. This
 plugin outputs a container for as many labels there are in the data container, which
 can be none, one or many in case of object detection. Second, the metadata value
-needs to be turned into a placeholder using the <code>metadata-to-placeholder</code> plugin.</p>
+needs to be turned into a variable using the <code>metadata-to-variable</code> plugin.</p>
 <p>Therefore, we can change the output part of the <a href="#extracting-frames">Extracting frames</a> 
 pipeline from:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">  </span>...
@@ -1571,7 +1571,7 @@ pipeline from:</p>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span>label-to-metadata<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span>-k<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span>metadata-to-placeholder<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span>metadata-to-variable<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span>-k<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span>-p<span class="w"> </span>TYPE<span class="w"> </span><span class="se">\ </span><span class="w">   </span>

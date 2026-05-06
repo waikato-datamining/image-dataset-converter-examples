@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://www.data-mining.co.nz/image-dataset-converter-examples/placeholders/">
+        <link rel="canonical" href="https://www.data-mining.co.nz/image-dataset-converter-examples/variables/">
       
       
-        <link rel="prev" href="../filters/">
-      
-      
-        <link rel="next" href="../execution_control/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Placeholders - image-dataset-converter examples</title>
+        <title>Variables - image-dataset-converter examples</title>
       
     
     
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder-types" class="md-skip">
+        <a href="#variable-types" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Placeholders
+              Variables
             
           </span>
         </div>
@@ -246,20 +242,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -280,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -407,35 +401,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Placeholders
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../placeholders.md" class="md-nav__link">
         
   
   
@@ -451,74 +420,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#placeholder-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Placeholder types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#relative-to-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Relative to input
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#in-place-predictions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In-place predictions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1196,10 +1097,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#placeholder-types" class="md-nav__link">
+  <a href="#variable-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Placeholder types
+        Variable types
       
     </span>
   </a>
@@ -1265,15 +1166,15 @@
   
 
 
-  <h1>Placeholders</h1>
+  <h1>Variables</h1>
 
 <p>Juggling longs paths in command-lines can be nightmare, which is the reason
-the image-dataset-converter library offers support for <em>placeholders</em>. 
-Placeholders can be used to shorten paths and making command-lines easier
-to transfer to another environment or user. Placeholders (format <code>{PH}</code>) 
+the image-dataset-converter library offers support for <em>variables</em>. 
+Variables can be used to shorten paths and making command-lines easier
+to transfer to another environment or user. Variables (format <code>{VAR}</code>) 
 get expanded dynamically at runtime, taking the current state into account.</p>
-<h2 id="placeholder-types">Placeholder types<a class="headerlink" href="#placeholder-types" title="Permanent link">#</a></h2>
-<p>There are different types of placeholders:</p>
+<h2 id="variable-types">Variable types<a class="headerlink" href="#variable-types" title="Permanent link">#</a></h2>
+<p>There are different types of variables:</p>
 <ul>
 <li>
 <p><strong>System-defined</strong> ones: </p>
@@ -1296,22 +1197,22 @@ get expanded dynamically at runtime, taking the current state into account.</p>
 </li>
 <li>
 <p><strong>User-defined</strong> ones, which are supplied to the tool itself, e.g., via the
-  <code>-p/--placeholders</code> option of the <code>idc-convert</code> tool. The same script can
-  be executed using different directories when using different placeholder 
-  setups. The format for the placeholders files is simple, one placeholder
-  per line using <code>placeholder=value</code> as format. Empty lines and ones starting 
+  <code>--variables</code> option of the <code>idc-convert</code> tool. The same script can
+  be executed using different directories when using different variable 
+  setups. The format for the variables files is simple, one variable
+  per line using <code>variable=value</code> as format. Empty lines and ones starting 
   with <code>#</code> get ignored.</p>
 </li>
 <li>
-<p><strong>Runtime</strong> ones, which can be set with the <code>set-placeholder</code> plugin.
-  These placeholders can be based on other placeholders. The reason for this
+<p><strong>Runtime</strong> ones, which can be set with the <code>set-variable</code> plugin.
+  These variables can be based on other variables. The reason for this
   plugin is that the output of filters like <code>meta-sub-images</code> don't have any
   directory associated with them anymore, only a file name. That renders all
-  the input-based placeholders unusable. Using <code>set-placeholder</code> beforehand
-  allows <em>saving</em> the input directory in another placeholder for later use.
-  Meta-data can be used as placeholders as well using the <code>metadata-to-placeholder</code>
+  the input-based variables unusable. Using <code>set-variable</code> beforehand
+  allows <em>saving</em> the input directory in another variable for later use.
+  Meta-data can be used as variables as well using the <code>metadata-to-variable</code>
   plugin, which extracts a particular key from the metadata passing through
-  and updates the specified placeholder accordingly.</p>
+  and updates the specified variable accordingly.</p>
 </li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
@@ -1333,14 +1234,14 @@ input directory <code>indexed</code> in a directory called <code>grayscale</code
 it can be tedious copying images around. Instead, if the model can communicate
 via Redis, the predictions can be placed in the same location as the input
 file even if the filter like <code>meta-sub-images</code> should invalidate the input-based
-placeholders like <code>{INPUT_PATH}</code>. The following command saves the current
+variables like <code>{INPUT_PATH}</code>. The following command saves the current
 input directory in <code>{OUTPUT_DIR}</code>, which is then used to save the generated
 prediction:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>idc-convert<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>from-data<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>-t<span class="w"> </span>is<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>-i<span class="w"> </span><span class="s2">&quot;/some/where/**/*.jpg&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>set-placeholder<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>set-variable<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span>-p<span class="w"> </span>OUTPUT_DIR<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span>-v<span class="w"> </span><span class="s2">&quot;{INPUT_PATH}&quot;</span><span class="w"> </span><span class="se">\</span>
