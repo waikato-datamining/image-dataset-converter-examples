@@ -1325,20 +1325,29 @@ When this is not an option, e.g., when in a headless environment on a server,
 then you can still generate simple text-based plots in the terminal via
 the <code>to-terminal-plot</code> writer of the <a href="https://github.com/waikato-datamining/kasperl-plots">kasperl-plots</a> 
 library.</p>
+<p>This command plots a log file in the terminal and exits:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>idc-convert<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>from-visualdl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span>-l<span class="w"> </span>INFO<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span>-i<span class="w"> </span><span class="s2">&quot;./logs/*.log&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span>-c<span class="w"> </span>scalar<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span>-t<span class="w"> </span><span class="s2">&quot;Evaluate/mIoU&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span>to-terminal-plot
+</span></code></pre></div>
 <p>The example pipeline below monitors the <code>./logs/</code> directory  for any 
 modifications to <code>.log</code> files. It then reads the modified file using the 
 <code>from-visualdl</code> reader, generating a plot for the <code>Evaluate/mIoU</code> scalar
 (use the <code>idc-visualdl-info</code> tool to inspect VisualDL log files) and 
 displays it using <code>to-terminal-plot</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>idc-convert<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>watch-dir<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span>-i<span class="w"> </span><span class="s2">&quot;./logs/&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span>-e<span class="w"> </span><span class="s2">&quot;.log&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span>-E<span class="w"> </span>modified<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span>-a<span class="w"> </span>nothing<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span>-p<span class="w"> </span>never<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span>-b<span class="w"> </span><span class="s2">&quot;from-visualdl -l INFO -c scalar -t Evaluate/mIoU&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span>to-terminal-plot
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>idc-convert<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>watch-dir<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span>-i<span class="w"> </span><span class="s2">&quot;./logs/&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span>-e<span class="w"> </span><span class="s2">&quot;.log&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span>-E<span class="w"> </span>modified<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span>-a<span class="w"> </span>nothing<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span>-p<span class="w"> </span>never<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span>-b<span class="w"> </span><span class="s2">&quot;from-visualdl -l INFO -c scalar -t Evaluate/mIoU&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span>to-terminal-plot
 </span></code></pre></div>
 <p>Below is a screenshot with two terminal sessions, one training a PaddleSeg
 model, and the other one monitoring/plotting the log file of the training run: </p>
