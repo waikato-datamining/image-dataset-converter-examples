@@ -75,6 +75,18 @@ then you can still generate simple text-based plots in the terminal via
 the `to-terminal-plot` writer of the [kasperl-plots](https://github.com/waikato-datamining/kasperl-plots) 
 library.
 
+This command plots a log file in the terminal and exits:
+
+```bash
+idc-convert \
+    from-visualdl \
+      -l INFO \
+      -i "./logs/*.log" \
+      -c scalar \
+      -t "Evaluate/mIoU" \
+    to-terminal-plot
+```
+
 The example pipeline below monitors the `./logs/` directory  for any 
 modifications to `.log` files. It then reads the modified file using the 
 `from-visualdl` reader, generating a plot for the `Evaluate/mIoU` scalar
