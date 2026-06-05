@@ -101,6 +101,7 @@ idc-convert \
       -E modified \
       -a nothing \
       -p never \
+      -w 5 \
       -b "from-visualdl -l INFO -c scalar -t Evaluate/mIoU" \
     to-terminal-plot
 ```
